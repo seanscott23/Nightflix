@@ -13,12 +13,27 @@ export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 })
 
-export const receiveSessionErrors = errors => ({
-    type: RECEIVE_SESSION_ERRORS,
-    errors
-})
+export const receiveSessionErrors = errors => {
+    debugger
+    return{
+        type: RECEIVE_SESSION_ERRORS,
+        errors
+    }
+}
 
 export const signup = user => dispatch => (
     APIUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)))
+    .fail(user => dispatch(receiveSessionErrors(user)))
+)
+
+export const login = user => dispatch => (
+    APIUtil.login(user)
+    .then(user => dispatch(receiveCurrentUser(user)))
+    .fail(user => dispatch(receiveCurrentUser(user)))
+)
+
+export const logout = () => dispatch => (
+    APIUtil.logout()
+        .then(user => dispatch(logoutCurrentUser()))
 )

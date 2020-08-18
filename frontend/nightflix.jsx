@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 // import Root from './components/root';
-// import configureStore from './store/store';
-import {login, logout, signup} from './util/session_api_util';
+import configureStore from './store/store';
+import {signup} from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    // const store = configureStore();
-    window.login = login;
+    const store = configureStore();
+    window.dispatch = store.dispatch;
     window.signup = signup;
-    window.logout = logout;
     ReactDom.render(<h1>React isn't broken</h1>, root);
 })
