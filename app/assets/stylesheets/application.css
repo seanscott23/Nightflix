@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ #nightflix-logo{
+     color: #e50914;    
+     line-height: 90px;
+     font-family: Bebas Neue Bold;
+     direction: ltr;
+    font-size: 34px;
+    margin-left: 56px;
+    letter-spacing: 2px;
+ }
+
+ .netflix-img{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url(https://assets.nflxext.com/ffe/siteui/vlv3/d49b6ea4-5a64-4996-a004-9d4d4f32839a/21515da9-d9b4-4702-8393-6cfcca6ee297/US-en-20200817-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+.sign-in-block{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,.75);
+    flex-direction: column;
+    width: 450px;
+    /* padding: 60px 68px 40px; */
+    margin-bottom: 90px;
+    height: 660px;
+}
+
+.reg-text {
+    color: white;
+}
+
+.auth-title{ 
+    font-size: 32px;
+    color: white;
+}
+
+.login-input{
+    top: 50%;
+    color: #8c8c8c;
+    padding: 10px;
+    width: 314px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pass{
+    margin-bottom: 40px;
+}
+
+
+.session-submit{
+background-color:#e50914;
+color: white;
+}
