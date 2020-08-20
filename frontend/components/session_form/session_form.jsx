@@ -1,4 +1,6 @@
 import React from 'react';
+import GreetingContainer from '../greeting/greeting_container';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -46,14 +48,14 @@ class SessionForm extends React.Component {
             <br/>
               <input type="text"
                 value={this.state.username}
-                placeholder="username"
+                placeholder="Username"
                 onChange={this.update('username')}
                 className="login-input"
               />
             <br/>
               <input type="password"
                 value={this.state.password}
-                placeholder="password"
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input pass"
               />
@@ -61,9 +63,14 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+
+      <GreetingContainer formType={this.props.formType}/>
+
       </div>
     );
   }
 }
+
+
 
 export default SessionForm;

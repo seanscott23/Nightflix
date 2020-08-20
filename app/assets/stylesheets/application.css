@@ -42,9 +42,9 @@ header {
  #nightflix-logo{
      color: #e50914;    
      line-height: 90px;
-     font-family: Bebas Neue Bold;
+     font-family: graphique, sans-serif;
      direction: ltr;
-    font-size: 34px;
+    font-size: 38px;
     margin-left: 56px;
     letter-spacing: 2px;
  }
@@ -66,18 +66,24 @@ header {
     background-color: rgba(0,0,0,.75);
     flex-direction: column;
     width: 450px;
-    /* padding: 60px 68px 40px; */
-    margin-bottom: 90px;
-    height: 660px;
+    height: 550px;
 }
 
 .reg-text {
     color: white;
+    font-size: 16px;
+}
+
+.sign-q{
+    font-size: 16px;
+    color: #8c8c8c;
 }
 
 .auth-title{ 
     font-size: 32px;
     color: white;
+    margin-top: 60px;
+    font-family: sans-serif;
 }
 
 .login-input{
@@ -87,6 +93,14 @@ header {
     width: 314px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 20px;
+    background-color: hsla(0, 0%, 25%, 0.75);
+    font-family: sans-serif;
 }
 
 .pass{
@@ -97,4 +111,35 @@ header {
 .session-submit{
 background-color:#e50914;
 color: white;
+width: 100%;
+border-radius: 4px;
+padding: 10px;
+margin-bottom: 30px;
+font-weight: 700;
+max-width: 100%;
+border: 0;
+box-sizing: border-box;
+letter-spacing: .2px;
+font-size: 16px;
+height: 50px;
+cursor: pointer;
+font-family: sans-serif;
+}
+
+.sign-link{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.sign-link:hover{
+   text-decoration: underline;
+}
+
+.login-signup{
+    display: flex;
+    justify-content: flex-start;
+    font-family: sans-serif;
 }

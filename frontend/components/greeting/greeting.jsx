@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, formType }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
-            <Link to="/login">Sign In</Link>
-            <br/>
-            <Link to="/signup">Sign up!</Link>
+            {(formType === 'Sign Up') ? 
+            (<Link className="sign-link" to="/login">Sign In</Link>) :
+            <div>
+               (<span className="sign-q">New to Nightflix? </span>
+            <Link className="sign-link" to="/signup">Sign up now.</Link>)
+            </div>
+            }
         </nav>
     );
     const personalGreeting = () => (
@@ -20,4 +24,4 @@ const greeting = ({ currentUser, logout }) => {
     return currentUser ? personalGreeting() : sessionLinks();
 };
 
-export default greeting;
+export default Greeting;
