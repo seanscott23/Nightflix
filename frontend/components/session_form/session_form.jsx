@@ -24,6 +24,15 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleDemo(){
+    e.preventDefault();
+    const user = {
+      username:'Watcher',
+      password: 'Watcher'
+    }
+    this.props.login(user);
+  }
+
   renderErrors() {
     return(
       <ul>
@@ -65,7 +74,7 @@ class SessionForm extends React.Component {
         </form>
 
       <GreetingContainer formType={this.props.formType}/>
-
+      <button className="demo-btn" onClick={this.handleDemo}>Demo Login</button>
       </div>
     );
   }

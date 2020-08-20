@@ -126,6 +126,31 @@ cursor: pointer;
 font-family: sans-serif;
 }
 
+.demo-btn{
+background-color:#e50914;
+color: white;
+width: 100%;
+border-radius: 4px;
+padding: 10px;
+margin-bottom: 30px;
+margin-top: 15px;
+font-weight: 700;
+max-width: 100%;
+border: 0;
+box-sizing: border-box;
+letter-spacing: .2px;
+font-size: 16px;
+height: 50px;
+cursor: pointer;
+font-family: sans-serif;
+}
+
+.demo-btn:hover{
+    font-size: 24px;
+    color: greenyellow;
+    transition: .3s;
+}
+
 .sign-link{
     text-decoration: none;
     font-size: 17px;
