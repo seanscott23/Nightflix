@@ -10,7 +10,7 @@ const NavBar = ({ currentUser, logout}) => {
             </div>
 
             <div className="right-bar">
-                    <button className="splash-sign-in">Sign In</button>
+                <Link className="splash-sign-in" to="/login">Sign In</Link>
             </div>
         </nav>
     );
