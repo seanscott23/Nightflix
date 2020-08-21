@@ -16,13 +16,13 @@ const NavBar = ({ currentUser, logout, location}) => {
         </nav>
     );
     const homeNav = () => (
-        <nav className="nav-bar">
+        <nav className="home-nav-bar">
             <div className="left-nav">
                 <h1 id="nightflix-logo">NIGHTFLIX</h1>
-                <ul>
+                <ul className="home-tabs">
                     <li>Home</li>
+                    <li>TV Shows</li>
                     <li>Movies</li>
-                    <li>Tv Shows</li>
                     <li>My List</li>
                 </ul>
             </div>
