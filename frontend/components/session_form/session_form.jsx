@@ -48,13 +48,6 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-    //   <div>
-    //  {(formType === 'Sign Up' || 'Sign In' ) ?
-    //  {  
-         
-    //   }{
-
-    // }
       
       <div className="sign-in-block">
         <div className="login-form-container">

@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const NavBar = ({ currentUser, logout}) => {
+const NavBar = ({ currentUser, logout, location}) => {
     const splashNav = () => (
         <nav className="nav-bar">
             <div className="left-bar">
                <h1 id="nightflix-logo">NIGHTFLIX</h1>
             </div>
-
+        {(location.pathname !== '/login') ?
             <div className="right-bar">
                 <Link className="splash-sign-in" to="/login">Sign In</Link>
             </div>
+            : null}
         </nav>
     );
     const homeNav = () => (
