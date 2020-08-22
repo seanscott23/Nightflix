@@ -28,7 +28,7 @@ const NavBar = ({ currentUser, logout, location}) => {
             </div>
             <div className="right-nav">
                 <button className="logout-button" onClick={logout}>Log Out</button>
-            </div>
+            </div> 
 
         </nav>
     );

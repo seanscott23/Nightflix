@@ -1,0 +1,17 @@
+
+
+
+////fill in videos model
+/////test in the rails console that I can make a videos
+
+/////videos controller and routes and jbuilder files for each controller action
+///// test all of this using postman
+
+/////connect frontend to backend
+////ajax calls to util for videos (separte files)
+//// test ajax calls by putting on window and invoking from browser console on localhost
+////new actions file, video actions and thunk actions
+////videos reducer
+/// test invoking thunk actions from the window
+
+///move on to containers and components for all of this.
