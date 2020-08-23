@@ -8,6 +8,7 @@
 ///// test all of this using postman
 
 /////connect frontend to backend
+
 ////ajax calls to util for videos (separte files)
 //// test ajax calls by putting on window and invoking from browser console on localhost
 ////new actions file, video actions and thunk actions

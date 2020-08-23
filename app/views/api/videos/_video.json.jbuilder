@@ -1,1 +1,5 @@
-json.extract! video, :id, :title
+
+json.video do 
+    json.id video.id
+    json.title video.title
+end
