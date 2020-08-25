@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import { showVideo } from '../../actions/video_actions';
-import VideosItem from './videos_item';
+import VideosItem from './videos_item.jsx';
 
 
 const mapStateToProps = (state, ownProps) => {
-    // debugger
     return {
         currentUser: state.entities.users[state.session.id],
         video: state.entities.videos[ownProps.match.params.videoId]

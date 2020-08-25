@@ -7,10 +7,11 @@ class VideosItem extends React.Component {
     }
 
     componentDidMount(){
-        this.props.showVideo(this.props.match.params.videoId)
+        // this.props.showVideo(this.props.match.params.videoId)
     }
 
     render() {
+        debugger
        if(!this.props.video){
             return null
        }

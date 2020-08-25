@@ -10,7 +10,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './Nav-bar/nav_bar_container';
 import HomePageContainer from "./home_page/home_page_container";
-import VideosItemContainer from './videos/videos_item_container';
+import VideosItemContainer from './videos/videos_show_container';
 import VideoIndexContainer from './videos/video_index_container';
 
 const App = () => (
