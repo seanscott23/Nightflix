@@ -1,8 +1,7 @@
 class Api::VideosController < ApplicationController
-    # before_action :require_logged_in, only: [:show, :index]
+    before_action :require_logged_in, only: [:show, :index]
 
     def show
-    
        @video = Video.find_by(id: params[:id])
        if @video
          render :show

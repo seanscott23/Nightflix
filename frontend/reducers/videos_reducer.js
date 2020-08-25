@@ -4,8 +4,7 @@ const VideosReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     switch (action.type) {
         case RECEIVE_CURRENT_VIDEO:
-        
-            return Object.assign({}, oldState, { [action.video.id]: action.video })
+            return Object.assign({}, oldState, action.video)
         default:
             return oldState;
     }

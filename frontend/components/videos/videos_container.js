@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { showVideo } from '../../actions/video_actions';
-import VideosForm from './videos';
+import VideosItem from './videos_item';
 
 
-const mapStateToProps = (state) => {
-
+const mapStateToProps = (state, ownProps) => {
+    // debugger
     return {
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        video: state.entities.videos[ownProps.match.params.videoId]
     }
 };
 
@@ -16,4 +17,4 @@ const mapDispatchToProps = dispatch => {
 }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(VideosForm);
+export default connect(mapStateToProps, mapDispatchToProps)(VideosItem);

@@ -5,6 +5,6 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Genre
 
-    has_one_attached :photo       
+    has_one_attached :video   
 end
 
