@@ -25,3 +25,10 @@ export const showVideo = videoId => dispatch => {
 }
 
 
+export const allVideos = () => dispatch => {
+    return (
+        APIUtil.fetchVideos()
+            .then(videos => dispatch(receiveCurrentVideo(videos)))
+            .fail(videos => dispatch(receiveSessionErrors(videos)))
+    )
+}

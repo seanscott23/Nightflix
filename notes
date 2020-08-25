@@ -17,3 +17,11 @@
 
 ///move on to containers and components for all of this.
 
+QUESTIONS:
+
+///how do i get the action correct for the index container. currently it takes in nothing and i'm confused about the dispatch function for it
+
+///how do i make the title the video go over the videos
+///how do i make the image show before hovering on the video itself
+///how do i make the controls hidden once they hover over.
+//how do i make it play on hover rather than click

@@ -10,7 +10,8 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './Nav-bar/nav_bar_container';
 import HomePageContainer from "./home_page/home_page_container";
-import VideosContainer from './videos/videos_container';
+import VideosItemContainer from './videos/videos_item_container';
+import VideoIndexContainer from './videos/video_index_container';
 
 const App = () => (
     <div>
@@ -22,7 +23,8 @@ const App = () => (
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path="/home" component={HomePageContainer} />
             <AuthRoute exact path="/" component={SplashContainer} />
-            <ProtectedRoute exact path="/videos/:videoId" component={VideosContainer}/>
+            <ProtectedRoute exact path="/videos/:videoId" component={VideosItemContainer}/>
+            <ProtectedRoute exact path="/videos" component={VideoIndexContainer}/>
         </div>
     </div>
 );

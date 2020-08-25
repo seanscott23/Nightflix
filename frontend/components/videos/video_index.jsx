@@ -6,17 +6,25 @@ class VideosIndex extends React.Component {
         super(props)
     }
 
+    componentDidMount(){
+        this.props.showVideo(this.props.match.params.videoId)
+    }
 
     render() {
+        if (!this.props.video) {
+            return null
+        }
+        debugger
         return (
-            <div>
+        <div>
             {this.props.video.map(video => {
-        <videoItem
-            key = {video.id}
-            video ={video}
-        />
-            })
-         } </div>
+                <VideoItemContainer
+                    key = {video.id}
+                    video ={video}
+                />
+                })
+             } 
+         </div>
         )
     }
 }
