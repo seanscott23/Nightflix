@@ -8,3 +8,16 @@ QUESTIONS:
 ///how do i make the image show before hovering on the video itself
 ///how do i make the controls hidden once they hover over.
 //how do i make it play on hover rather than click
+
+
+
+
+
+
+
+/////in video index component -render genre video index component for ever genre.
+////for genre video index container that maps state to props using a selector
+/////make sure video info in redux store includes genre id 
+
+//look at selectors and figure out how to write selectors given a genre id 
+////return an array or video POJOs that will have that genre id

@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      
+  
       <div className="sign-in-block">
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box reg-text">

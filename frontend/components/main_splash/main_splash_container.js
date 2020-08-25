@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
-
-import { logout } from '../../actions/session_actions';
-import HomePageFrom from './home_page';
+import MainSplash from './main_splash';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
@@ -10,11 +8,8 @@ const mapStateToProps = ({ session, entities: { users } }) => {
     }
 };
 
-const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logout())
-});
 
 export default withRouter(connect(
     mapStateToProps,
-    mapDispatchToProps
-)(HomePageFrom));
+    null
+)(MainSplash));

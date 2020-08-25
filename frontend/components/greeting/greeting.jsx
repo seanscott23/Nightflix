@@ -14,11 +14,7 @@ const Greeting = ({ currentUser, logout, formType }) => {
             }
         </nav>
     );
-    // const personalGreeting = () => (
-    //     <hgroup className="header-group">
-    //         <button className="header-button" onClick={logout}>Log Out</button>
-    //     </hgroup>
-    // );
+ 
 
     return currentUser ? null : sessionLinks();
 };

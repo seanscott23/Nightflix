@@ -62,7 +62,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: static;
+    position: fixed;
  }
 
 .sign-in-block{
@@ -73,8 +73,6 @@ header {
     flex-direction: column;
     width: 450px;
     height: 550px;
-    padding-bottom: 40px;
-    margin: 75px auto;
   
 }
 
@@ -214,7 +212,7 @@ font-family: sans-serif;
  .logout-button{
    align-self: flex-end;
    cursor: pointer;
-    margin-right: 56px;
+    margin-right: 115px;
     line-height: normal;
     background-color: #e50914;
     padding: 7px 17px;
@@ -250,6 +248,8 @@ font-family: sans-serif;
     margin: 0 3.5rem;
     position: relative;
     padding-top: 20px;
+    overflow: hidden;
+    z-index: 4;
 }
 
 

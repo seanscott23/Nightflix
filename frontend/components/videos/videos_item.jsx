@@ -11,7 +11,7 @@ class VideosItem extends React.Component {
     }
 
     render() {
-        debugger
+     
        if(!this.props.video){
             return null
        }
@@ -20,6 +20,7 @@ class VideosItem extends React.Component {
             <div className="video-show">
                 <h1 className="video-title">{this.props.video.title}</h1>
                 <video className="video-trailer" 
+                poster=""
                 width="219" 
                 height="123" controls>
                     <source src={this.props.video.videoUrl} type="video/mp4" ></source>
