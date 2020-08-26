@@ -16,6 +16,7 @@ const receiveSessionErrors = errors => {
     }
 }
 
+
 export const showVideo = videoId => dispatch => {
   return (
     APIUtil.fetchVideo(videoId)

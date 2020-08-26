@@ -186,10 +186,13 @@ font-family: sans-serif;
     height: 68px;
     float: left;
     padding: 0 3.5rem;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    top: 0;
+      background-color: #141414;
 }
 
 

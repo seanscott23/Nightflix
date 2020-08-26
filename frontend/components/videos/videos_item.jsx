@@ -7,7 +7,7 @@ class VideosItem extends React.Component {
     }
 
     componentDidMount(){
-        // this.props.showVideo(this.props.match.params.videoId)
+
     }
 
     render() {
@@ -20,12 +20,24 @@ class VideosItem extends React.Component {
             <div className="video-show">
                 <h1 className="video-title">{this.props.video.title}</h1>
                 <video className="video-trailer" 
-                poster=""
+                onMouseEnter={this.props.video.playVid = (video) => (video.play())}
+                onMouseLeave={this.props.video.pauseVid = (video) => (video.pause())}
                 width="219" 
-                height="123" controls>
-                    <source src={this.props.video.videoUrl} type="video/mp4" ></source>
+                height="123">
+                    <source src={`${this.props.video.videoUrl}#t=4`} type="video/mp4" ></source>
                 </video>
             </div>
+           
+//  const vid = document.getElementById("video_item");
+
+//         function playVid() {
+//             vid.play();
+//         }
+
+//         function pauseVid() {
+//             vid.pause();
+//         } 
+
         )
     }
 }

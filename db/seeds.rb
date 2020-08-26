@@ -17,27 +17,27 @@ User.create!(username: 'Watcher', password: 'Watcher')
 
 
 
-demo_video1 = Video.create!(title: 'The Hundred Foot Journey', genre: "comedy", description: "comedy")
+demo_video1 = Video.create!(title: 'The Hundred Foot Journey', genre: "Romance, Drama", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/100_foot_journey.mp4')
 demo_video1.video.attach(io: file, filename: '100_foot_journey.mp4')
 
-demo_video2 = Video.create!(title: '50 First Dates', genre: "comedy", description: "comedy")
+demo_video2 = Video.create!(title: '50 First Dates', genre: "Romance, Comedy", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/50_first_dates.mp4')
 demo_video2.video.attach(io: file, filename: '50_first_dates.mp4')
 
-demo_video3 = Video.create!(title: 'Alita Battle Angel', genre: "comedy", description: "comedy")
+demo_video3 = Video.create!(title: 'Alita Battle Angel', genre: "Action, Science Fiction", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Alita_battle_angel.mp4')
 demo_video3.video.attach(io: file, filename: 'Alita_battle_angel.mp4')
 
-demo_video4 = Video.create!(title: 'Arrival', genre: "comedy", description: "comedy")
+demo_video4 = Video.create!(title: 'Arrival', genre: "Science Fiction, Thriller", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Arrival.mp4')
 demo_video4.video.attach(io: file, filename: 'Arrival.mp4')
 
-demo_video5 = Video.create!(title: 'Forrest Gump', genre: "comedy", description: "comedy")
+demo_video5 = Video.create!(title: 'Forrest Gump', genre: "Comedy, Drama", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Forrest_gump.mp4')
 demo_video5.video.attach(io: file, filename: 'Forrest_gump.mp4')
 
-demo_video6 = Video.create!(title: 'Good Will Hunting', genre: "comedy", description: "comedy")
+demo_video6 = Video.create!(title: 'Good Will Hunting', genre: "Drama, Romance", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Good_will_hunting.mp4')
 demo_video6.video.attach(io: file, filename: 'Good_will_hunting.mp4')
 
@@ -45,7 +45,7 @@ demo_video7 = Video.create!(title: 'Hook', genre: "Family, Fantasy", description
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Hook.mp4')
 demo_video7.video.attach(io: file, filename: 'Hook.mp4')
 
-demo_video8 = Video.create!(title: 'Interstellar', genre: "Sci-fi, Adventure", description: "comedy")
+demo_video8 = Video.create!(title: 'Interstellar', genre: "Science Fiction, Adventure", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Interstellar.mp4')
 demo_video8.video.attach(io: file, filename: 'Interstellar.mp4')
 
@@ -57,7 +57,7 @@ demo_video10 = Video.create!(title: 'Limitless', genre: "Thriller, Action", desc
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Limitless.mp4')
 demo_video10.video.attach(io: file, filename: 'Limitless.mp4')
 
-demo_video11 = Video.create!(title: 'Matrix', genre: "Action, Sci-fi", description: "comedy")
+demo_video11 = Video.create!(title: 'Matrix', genre: "Action, Science Fiction", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Matrix.mp4')
 demo_video11.video.attach(io: file, filename: 'Matrix.mp4')
 
