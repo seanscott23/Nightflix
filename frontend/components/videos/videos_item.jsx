@@ -10,6 +10,14 @@ class VideosItem extends React.Component {
 
     }
 
+    handleMouseEnter(e){
+        e.currentTarget.play()
+    }
+
+    handleMouseLeave(e){
+        e.currentTarget.pause()
+    }
+
     render() {
      
        if(!this.props.video){
@@ -19,12 +27,12 @@ class VideosItem extends React.Component {
         return (
             <div className="video-show">
                 <h1 className="video-title">{this.props.video.title}</h1>
-                <video className="video-trailer" 
-                onMouseEnter={this.props.video.playVid = (video) => (video.play())}
-                onMouseLeave={this.props.video.pauseVid = (video) => (video.pause())}
+                <video id="video-test" className="video-trailer" 
+                onMouseEnter={this.handleMouseEnter.bind(this)}
+                onMouseLeave={this.handleMouseLeave.bind(this)}
                 width="219" 
                 height="123">
-                    <source src={`${this.props.video.videoUrl}#t=33`} type="video/mp4" ></source>
+                    <source src={`${this.props.video.videoUrl}#t=3`} type="video/mp4" ></source>
                 </video>
             </div>
            

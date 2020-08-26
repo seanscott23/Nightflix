@@ -12,7 +12,6 @@ class VideosIndex extends React.Component {
     }
 
     render() {
-        // debugger
         return (
         <div className="video-container">
                 <section className="genre-section">
