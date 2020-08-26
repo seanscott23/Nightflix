@@ -1,20 +1,25 @@
 // Place all the styles related to the Videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.video-trailer{
- transition: all .2s ease-in-out;
- box-sizing: border-box;
-    border-radius: 5px;
-}
 
-.video-trailer:hover{
-transform: scale(1.8); 
-margin-left: 100px;
-}
 
 .video-show{
  float: left;
  width: 100%;
+  transition: all .2s ease-in-out;
+ box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.video-show:hover{
+    transform: scale(1.8); 
+margin-left: 100px;
+
+}
+
+.video-full{
+    background-color: black;
+    width: 220px;
 }
 
 .video-item{
@@ -60,10 +65,38 @@ margin-left: 100px;
     padding-left: 110px;
 }
 
-// .video-container{
+.video-control-bar{
+    display: none;
+}
+
+.video-trailer{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: black;
+}
+
+.video-show:hover >
+.video-full >
+.video-control-bar{
+  height: 25px;
+  display: block;
+  background-color:  black;
+  margin-top: 0;
+  padding-top: 0;
+  width: 219px;
+
+}
+
+.video-like-button{
+    height: 15px;
+}
+
+
+
+// .genre-section{
 //     display: grid;
 //     grid-template-columns: (3, 100%);
-//     section{
+//      .video-item{
 //         width: 100%;
 //         height: 100px;
 //     }
