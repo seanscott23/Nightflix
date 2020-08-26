@@ -24,7 +24,7 @@ class VideosItem extends React.Component {
                 onMouseLeave={this.props.video.pauseVid = (video) => (video.pause())}
                 width="219" 
                 height="123">
-                    <source src={`${this.props.video.videoUrl}#t=4`} type="video/mp4" ></source>
+                    <source src={`${this.props.video.videoUrl}#t=33`} type="video/mp4" ></source>
                 </video>
             </div>
            

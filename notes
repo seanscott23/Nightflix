@@ -2,22 +2,6 @@
 
 QUESTIONS:
 
-///how do i get the action correct for the index container. currently it takes in nothing and i'm confused about the dispatch function for it
-
-///how do i make the title the video go over the videos
-///how do i make the image show before hovering on the video itself
-///how do i make the controls hidden once they hover over.
-//how do i make it play on hover rather than click
-
-
-
-
-
-
-
-/////in video index component -render genre video index component for ever genre.
-////for genre video index container that maps state to props using a selector
-/////make sure video info in redux store includes genre id 
-
-//look at selectors and figure out how to write selectors given a genre id 
-////return an array or video POJOs that will have that genre id
+get the carousel to work so that I can scroll horizontally with videos
+what to do with video title. how to get it to show on the video in corner when playing?
+how to get my play pause functions to work 
