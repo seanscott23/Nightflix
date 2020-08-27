@@ -37,20 +37,10 @@ class VideosItem extends React.Component {
                         <source src={`${this.props.video.videoUrl}#t=3`} type="video/mp4" ></source>
                     </video>
                     <div className="video-control-bar">
-                        <button className="video-like-button"><i class="fas fa-plus-circle-light"></i></button>
+                        <button className="video-like-button"><i class="fas fa-plus-circle"></i></button>
                     </div>
                 </div>
             </div>
-           
-//  const vid = document.getElementById("video_item");
-
-//         function playVid() {
-//             vid.play();
-//         }
-
-//         function pauseVid() {
-//             vid.pause();
-//         } 
 
         )
     }

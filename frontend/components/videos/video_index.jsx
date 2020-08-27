@@ -17,7 +17,7 @@ class VideosIndex extends React.Component {
                 <section className="genre-section">
                     <h1 className="genre-title">Action</h1> 
                     {this.props.Action.map(video => (
-                        <div className="video-item">
+                        <div className="video-item" onClick={this.props.history.push(`/videos/${video.id}`)}>
                             <VideosItem
                                 key={video.id}
                                 video={video}

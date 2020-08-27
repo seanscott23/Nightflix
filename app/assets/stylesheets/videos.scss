@@ -20,6 +20,8 @@ margin-left: 100px;
 .video-full{
     background-color: black;
     width: 220px;
+     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .video-item{
@@ -73,22 +75,27 @@ margin-left: 100px;
     padding-bottom: 0;
     margin-bottom: 0;
     background-color: black;
+     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .video-show:hover >
 .video-full >
 .video-control-bar{
-  height: 25px;
-  display: block;
+  height: 35px;
+  display: flex;
   background-color:  black;
   margin-top: 0;
   padding-top: 0;
   width: 219px;
-
+    justify-content: flex-start;
+    padding-left: 25px;
+     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .video-like-button{
-    height: 15px;
+    margin-bottom: 15px;
 }
 
 
