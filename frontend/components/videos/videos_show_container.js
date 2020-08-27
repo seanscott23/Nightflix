@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { showVideo } from '../../actions/video_actions';
-import VideosItem from './videos_item.jsx';
+import VideoShow from './video_show.jsx';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => {
 }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(VideosItem);
+export default connect(mapStateToProps, mapDispatchToProps)(VideoShow);

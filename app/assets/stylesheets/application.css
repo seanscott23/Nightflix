@@ -195,6 +195,22 @@ font-family: sans-serif;
     background-color: #141414;
 }
 
+.home-nav-bar >
+.right-nav >
+ input[type=text] {
+     position: absolute;
+     display: none;
+     border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 14px;
+  border-radius: 3px; 
+}
+
+  
+.fa-search{
+    position: relative;
+}
 
 
 .left-nav #nightflix-logo{

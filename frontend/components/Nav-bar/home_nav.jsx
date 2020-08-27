@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const HomeNav = ({ currentUser, logout, location}) => {
+
 
         if(!currentUser){
             return null
@@ -19,6 +21,11 @@ const HomeNav = ({ currentUser, logout, location}) => {
                 </ul>
             </div>
             <div className="right-nav">
+                    <button>
+                        <i className="fas fa-search">
+                            <input type="text" placeholder="Search" />
+                        </i>
+                    </button>
                 <button className="logout-button" onClick={logout}>Log Out</button>
             </div> 
         </nav>

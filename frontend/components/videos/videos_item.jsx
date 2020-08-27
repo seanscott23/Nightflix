@@ -18,6 +18,7 @@ class VideosItem extends React.Component {
         e.currentTarget.pause()
     }
 
+
     render() {
      
        if(!this.props.video){
@@ -27,7 +28,7 @@ class VideosItem extends React.Component {
         return (
             <div className="video-show">
                 <h1 className="video-title">{this.props.video.title}</h1>
-                <div className="video-full">
+                <div className="video-full" onClick={() => this.props.history.push(`/videos/${this.props.video.id}`)}>
                     <video id="video-test" className="video-trailer" 
                     onMouseEnter={this.handleMouseEnter.bind(this)}
                     onMouseLeave={this.handleMouseLeave.bind(this)}
@@ -37,7 +38,7 @@ class VideosItem extends React.Component {
                         <source src={`${this.props.video.videoUrl}#t=3`} type="video/mp4" ></source>
                     </video>
                     <div className="video-control-bar">
-                        <button className="video-like-button"><i class="fas fa-plus-circle"></i></button>
+                        <button className="video-like-button"><i className="fas fa-plus-circle"></i></button>
                     </div>
                 </div>
             </div>
