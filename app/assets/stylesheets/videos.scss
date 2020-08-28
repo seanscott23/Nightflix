@@ -121,18 +121,27 @@ margin-left: 100px;
      
 }
 
-.main-title{
+.video-main .main-title{
     color: white;
-    margin: 0 auto;
+    margin: 295px 410px 0px auto;
     font-size: 36px;
+    z-index: 10;
+    opacity: .4;
+    position: absolute;
+    display: none;
+}
+
+.active .main-title{
+    display: block;
 }
 
 .video-main{
      width: 600px;
+     height: 337px;
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    
+    position: relative;
 }
 
 .video-main > video{
@@ -141,15 +150,17 @@ margin-left: 100px;
     background-color: #141414;
     top: 0;
     bottom:0;
+    cursor: pointer;
     box-sizing: border-box;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: absolute;
 }
 
 .main-video-like-button{
-    display: block;
+    display: flex;
     align-content: center;
-    height: 35px;
+    height: 45px;
     width: 100%;
   background-color:  black;
   margin-top: 0;
@@ -160,6 +171,14 @@ margin-left: 100px;
       box-sizing: border-box;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+
+.fa-plus-circle{
+  color: white;
+  cursor: pointer;
+  margin: auto 0;
+    font-size: 1.35em;
 }
 
 
