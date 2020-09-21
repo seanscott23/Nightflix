@@ -20,14 +20,15 @@ class VideosItem extends React.Component {
 
 
     render() {
-     
        if(!this.props.video){
             return null
        }
 
         return (
+
             <div className="video-show">
                 <h1 className="video-title">{this.props.video.title}</h1>
+                
                 <div className="video-full" onClick={() => this.props.history.push(`/videos/${this.props.video.id}`)}>
                     <video id="video-test" className="video-trailer" 
                     onMouseEnter={this.handleMouseEnter.bind(this)}
