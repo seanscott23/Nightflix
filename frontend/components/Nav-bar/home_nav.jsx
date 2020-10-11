@@ -1,32 +1,75 @@
 import React from 'react';
 import { Link, withRouter, useHistory } from 'react-router-dom';
+import HomeSearch from '../home/home_search';
 
+({ currentUser, logout, props, location})
 
-const HomeNav = ({ currentUser, logout, props, location}) => {
-
-
-        if(!currentUser){
-            return null
+class HomeNav extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      search: ''
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+    // if(!currentUser){
+    //         return null
+    //     }
+    
+    handleSubmit(e){
+      e.preventDefault();
+      setTimeout((() => {
+        if (this.state.search === "") {
+          this.props.history.push("/videos")
+        }else {
+          this.props.history.push(`/search/${this.state.search}`)
         }
+      }), 100)
+    }
+
+handleUpdate(e){
+  this.setState({
+    search: e.currentTarget.value
+  });
+}
+
+
+render(){
         return (
-      
-        <nav className="home-nav-bar">
+          <nav className="home-nav-bar">
             <div className="left-nav">
-                <h1 id="nightflix-logo">NIGHTFLIX</h1>
-                <ul className="home-tabs">
-                        <li> <Link className="home-link" onClick={() => history.goBack()}>Home</Link></li>
-                    <li>TV Shows</li>
-                    <li>Movies</li>
-                    <li>My List</li>
-                </ul>
+              <h1 id="nightflix-logo">NIGHTFLIX</h1>
+              <ul className="home-tabs">
+                <li>
+                  {" "}
+                  <Link className="home-link" to={"/videos"}>
+                    Home
+                  </Link>
+                </li>
+                <li>TV Shows</li>
+                <li>Movies</li>
+                <li>My List</li>
+              </ul>
             </div>
             <div className="right-nav">
-                    <div className="search-box"> <input className="search-bar-home" type="text" placeholder="Search" /></div>
-               
-                <button className="logout-button" onClick={logout}>Log Out</button>
-            </div> 
-        </nav>
-        )
+              <div className="search-box">
+                <input
+                  className="search-bar-home"
+                  type="text"
+                  value={this.state.search}
+                  placeholder="Search"
+                  onChange={this.handleUpdate}
+                  to={"/search"}
+                />
+              </div>
+
+              <button className="logout-button" onClick={this.props.logout}>
+                Log Out
+              </button>
+            </div>
+          </nav>
+        );
+}
 
     };
 
