@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link, withRouter, useHistory } from 'react-router-dom';
-import HomeSearch from '../home/home_search';
 
-({ currentUser, logout, props, location})
+
+// ({ currentUser, logout, props, location})
 
 class HomeNav extends React.Component{
   constructor(props){
     super(props)
     this.state = {
       search: ''
-    }
+    };
+    this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
     // if(!currentUser){
@@ -28,6 +29,7 @@ class HomeNav extends React.Component{
     }
 
 handleUpdate(e){
+  e.preventDefault()
   this.setState({
     search: e.currentTarget.value
   });
@@ -53,14 +55,16 @@ render(){
             </div>
             <div className="right-nav">
               <div className="search-box">
-                <input
-                  className="search-bar-home"
-                  type="text"
-                  value={this.state.search}
-                  placeholder="Search"
-                  onChange={this.handleUpdate}
-                  to={"/search"}
-                />
+                <form onChange={this.handleSubmit}>
+                  <input
+                    className="search-bar-home"
+                    type="text"
+                    value={this.state.search}
+                    placeholder="Search"
+                    onChange={this.handleUpdate}
+                    to={"/search"}
+                  />
+                </form>
               </div>
 
               <button className="logout-button" onClick={this.props.logout}>
