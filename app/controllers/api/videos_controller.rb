@@ -10,16 +10,6 @@ class Api::VideosController < ApplicationController
        end
     end
 
-    def search
-        @users = User.all
-        args = params[:args].split(" ")
-        @videos = []
-        args.each do |arg| 
-            @videos.concat(Video.where("lower(title) LIKE ?", "%#{arg.downcase}"))
-        end
-        render :index
-    end
-
     def index
         @videos = Video.all
         render :index

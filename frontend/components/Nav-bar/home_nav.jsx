@@ -19,13 +19,7 @@ class HomeNav extends React.Component{
     
     handleSubmit(e){
       e.preventDefault();
-      setTimeout((() => {
-        if (this.state.search === "") {
-          this.props.history.push("/videos")
-        }else {
-          this.props.history.push(`/search/${this.state.search}`)
-        }
-      }), 100)
+     this.props.fetchSearchResults(this.state.search)
     }
 
 handleUpdate(e){
@@ -55,7 +49,7 @@ render(){
             </div>
             <div className="right-nav">
               <div className="search-box">
-                <form onChange={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                   <input
                     className="search-bar-home"
                     type="text"
