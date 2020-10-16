@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, useHistory } from 'react-router-dom';
+import { Link, withRouter, useHistory, Redirect } from 'react-router-dom';
 
 
 // ({ currentUser, logout, props, location})
@@ -8,7 +8,8 @@ class HomeNav extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      search: ''
+      search: '',
+      searched: false
     };
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,7 +20,10 @@ class HomeNav extends React.Component{
     
     handleSubmit(e){
       e.preventDefault();
-     this.props.fetchSearchResults(this.state.search)
+     this.props.fetchSearchResults(this.state.search);
+    this.setState({
+      searched: true
+    }) 
     }
 
 handleUpdate(e){
@@ -30,7 +34,11 @@ handleUpdate(e){
 }
 
 
+
 render(){
+
+  let redirectToResults = this.state.searched ? <Redirect to="/search" /> : null;
+
         return (
           <nav className="home-nav-bar">
             <div className="left-nav">
@@ -58,6 +66,7 @@ render(){
                     onChange={this.handleUpdate}
                     to={"/search"}
                   />
+                  {redirectToResults}
                 </form>
               </div>
 

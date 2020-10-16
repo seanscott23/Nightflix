@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 
 const SplashNav = ({ location }) => {
-    debugger
+
     return(
         <nav className="nav-bar">
             <div className="left-bar">

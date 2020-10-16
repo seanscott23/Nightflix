@@ -10,7 +10,6 @@ import SearchContainer from './search/search_container';
 const App = () => (
     <div>
         <MainSplashContainer/>
-        <HomeNavContainer/>
         <Switch>
             <ProtectedRoute exact path="/videos/:videoId" component={VideosShowContainer} />
             <ProtectedRoute exact path="/videos" component={VideoIndexContainer} />

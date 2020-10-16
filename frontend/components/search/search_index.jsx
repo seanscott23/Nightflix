@@ -6,14 +6,23 @@ class SearchPage extends React.Component {
     super(props);
   }
 
+  // componentDidMount(){
+  //   fetchSearchResults(query)
+  // }
+
   render() {
-    if (!this.props.video) {
+    debugger
+
+    if (!this.props.search) {
       return null;
     }
 
     return (
-      <div>
-        <VideosItem/>
+      <div className="search-video-show">
+        {this.props.search.map( (video) => {
+          return <VideosItem videos={this.props.search}
+          key = {video.id} />;
+        })}
       </div>
     );
   }

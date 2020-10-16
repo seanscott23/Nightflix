@@ -23,7 +23,7 @@ class VideosItem extends React.Component {
        if(!this.props.video){
             return null
        }
-
+       
         return (
 
             <div className="video-show">
