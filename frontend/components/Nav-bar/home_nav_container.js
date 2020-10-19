@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import { fetchSearchResults } from '../../actions/search_actions';
 
 
+
 const mapStateToProps = ({ session, entities: { users } }) => {
     return {
         currentUser: users[session.id]

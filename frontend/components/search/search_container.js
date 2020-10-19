@@ -5,6 +5,7 @@ import SearchPage from "./search_index";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
+
   return {
     currentUser: state.entities.users[state.session.id],
     videos: Object.values(state.entities.videos),

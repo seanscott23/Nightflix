@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link, withRouter, useHistory, Redirect } from 'react-router-dom';
 
-
-// ({ currentUser, logout, props, location})
-
 class HomeNav extends React.Component{
   constructor(props){
     super(props)
@@ -14,31 +11,26 @@ class HomeNav extends React.Component{
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-    // if(!currentUser){
-    //         return null
-    //     }
     
-    handleSubmit(e){
-      e.preventDefault();
-     this.props.fetchSearchResults(this.state.search);
+  handleSubmit(e){
+    e.preventDefault();
+    console.log("hit the submit");
+    this.props.fetchSearchResults(this.state.search);
     this.setState({
       searched: true
     }) 
-    }
+  }
 
 handleUpdate(e){
-  e.preventDefault()
+  e.preventDefault();
+  console.log("hit the update");
   this.setState({
-    search: e.currentTarget.value
+    search: e.currentTarget.value,
   });
 }
 
-
-
 render(){
-
   let redirectToResults = this.state.searched ? <Redirect to="/search" /> : null;
-
         return (
           <nav className="home-nav-bar">
             <div className="left-nav">

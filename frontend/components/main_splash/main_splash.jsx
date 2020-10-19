@@ -5,7 +5,7 @@ import SplashContainer from '../Splash_Container/splash_container';
 import SplashNav from '../Nav-bar/splash_nav';
 import {AuthRoute} from '../../util/route_util'
 import { withRouter } from 'react-router-dom';
-import HomeNav from '../Nav-bar/home_nav'
+import HomeNavContainer from '../Nav-bar/home_nav_container'
 class MainSplash extends React.Component {
 
     render() {
@@ -15,7 +15,7 @@ class MainSplash extends React.Component {
                  {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
                 <AuthRoute exact path="/" component={SplashContainer} /> 
-                <HomeNav/>
+                <HomeNavContainer/>
                 </div>
             )
         }else{
