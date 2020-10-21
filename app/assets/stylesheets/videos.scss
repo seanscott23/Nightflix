@@ -133,7 +133,8 @@ margin-left: 100px;
 
 .video-main .main-title{
     color: white;
-    margin: 295px 410px 0px auto;
+    left: 0;
+    margin: 295px 4px 0px auto;
     font-size: 36px;
     z-index: 10;
     opacity: .4;
@@ -167,11 +168,12 @@ margin-left: 100px;
     position: absolute;
 }
 
+
 .main-video-like-button{
     display: flex;
     align-content: center;
     height: 45px;
-    width: 100%;
+    width: 99.9%;
   background-color:  black;
   margin-top: 0;
     border: none;

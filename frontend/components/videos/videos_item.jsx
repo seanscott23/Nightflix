@@ -1,10 +1,14 @@
 import React from "react";
 
+
 class VideosItem extends React.Component {
   constructor(props) {
     super(props);
+    this.addToList = this.addToList.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
-
+  
   handleMouseEnter(e) {
     e.currentTarget.play();
   }
@@ -12,6 +16,11 @@ class VideosItem extends React.Component {
   handleMouseLeave(e) {
     e.currentTarget.pause();
   }
+
+  addToList(videoId){
+      debugger
+      this.addToMyList(this.props.video.id);
+  };
 
   render() {
     return (
@@ -27,8 +36,8 @@ class VideosItem extends React.Component {
           <video
             id="video-test"
             className="video-trailer"
-            onMouseEnter={this.handleMouseEnter.bind(this)}
-            onMouseLeave={this.handleMouseLeave.bind(this)}
+            onMouseEnter={(e) => this.handleMouseEnter(e)}
+            onMouseLeave={(e) => this.handleMouseLeave(e)}
             width="219"
             height="123"
           >
@@ -38,7 +47,7 @@ class VideosItem extends React.Component {
             ></source>
           </video>
           <div className="video-control-bar">
-            <button className="video-like-button">
+            <button className="video-like-button" onClick={() => this.addToList(this.props.video.id)}>
               <i className="fas fa-plus-circle"></i>
             </button>
           </div>

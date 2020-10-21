@@ -9,6 +9,7 @@ class VideosIndex extends React.Component {
 
     componentDidMount(){
         this.props.allVideos()
+     
     }
 
     render() {
@@ -20,9 +21,10 @@ class VideosIndex extends React.Component {
               {this.props.Action.map((video) => (
                 <div className="video-item">
                   <VideosItem
-                    key={video.id}
+                    key={"action" + parseInt(video.id)}
                     video={video}
                     history={this.props.history}
+                  
                   />
                 </div>
               ))}
@@ -31,7 +33,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Comedies</h1>
               {this.props.Comedy.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"comedy" + parseInt(video.id)}
+                    video={video}
+                
+                  />
                 </div>
               ))}
             </section>
@@ -39,7 +45,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Fantasy</h1>
               {this.props.Fantasy.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"fantasy" + parseInt(video.id)}
+                    video={video}
+                   
+                  />
                 </div>
               ))}
             </section>
@@ -47,7 +57,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Drama</h1>
               {this.props.Drama.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"drama" + parseInt(video.id)}
+                    video={video}
+             
+                  />
                 </div>
               ))}
             </section>
@@ -55,7 +69,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Crime</h1>
               {this.props.Crime.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"crime" + parseInt(video.id)}
+                    video={video}
+                    // addToMyList={addToMyList}
+                  />
                 </div>
               ))}
             </section>
@@ -63,7 +81,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Science Fiction</h1>
               {this.props.Science.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"science-fiction" + parseInt(video.id)}
+                    video={video}
+                    // addToMyList={addToMyList}
+                  />
                 </div>
               ))}
             </section>
@@ -71,7 +93,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Thriller</h1>
               {this.props.Thriller.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"thriller" + parseInt(video.id)}
+                    video={video}
+                    // addToMyList={addToMyList}
+                  />
                 </div>
               ))}
             </section>
@@ -79,7 +105,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Family</h1>
               {this.props.Family.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"family" + parseInt(video.id)}
+                    video={video}
+                    // addToMyList={addToMyList}
+                  />
                 </div>
               ))}
             </section>
@@ -87,7 +117,11 @@ class VideosIndex extends React.Component {
               <h1 className="genre-title">Romance</h1>
               {this.props.Romance.map((video) => (
                 <div className="video-item">
-                  <VideosItem key={video.id} video={video} />
+                  <VideosItem
+                    key={"romance" + parseInt(video.id)}
+                    video={video}
+                    // addToMyList={addToMyList}
+                  />
                 </div>
               ))}
             </section>

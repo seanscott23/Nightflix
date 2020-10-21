@@ -4,7 +4,6 @@ const SearchReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case Receive_Search_Results:
-      console.log("reduce")
       return Object.assign({}, oldState, action.movies)
     default:
       return oldState;

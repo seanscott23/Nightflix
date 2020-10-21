@@ -50,8 +50,11 @@ input:focus {
     outline:none;
 }
 
-.home-link{
+.home-link,
+.list-link{
   text-decoration: none;
   color: white;
   font: sans-serif;
 }
+
+

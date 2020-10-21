@@ -44,7 +44,11 @@ render(){
                 </li>
                 <li>TV Shows</li>
                 <li>Movies</li>
-                <li>My List</li>
+                <li>
+                  <Link className="list-link" to={"/mylist"}>
+                    My List
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="right-nav">
