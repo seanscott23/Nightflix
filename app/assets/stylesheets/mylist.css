@@ -1,0 +1,19 @@
+
+
+.list-video-item-flex{
+    height: 150px;
+    cursor: pointer;
+    margin-left: 5.5%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0 2px;
+}
+
+.video-show-list{
+   width: 20%;
+    transition: all .2s ease-in-out;
+  box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+

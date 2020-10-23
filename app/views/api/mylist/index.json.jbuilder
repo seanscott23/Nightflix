@@ -1,8 +1,8 @@
-@videos.each do |video|
-    json.set! video.id do 
-        json.id   video.id
-        json.title video.title
-        json.genre video.genre
-        json.videoUrl url_for(video.video)
+@mylist.each do |like|
+    json.set! like.id do 
+        json.id   like.video.id
+        json.title like.video.title
+        json.genre like.video.genre
+        json.videoUrl url_for(like.video.video)
     end
 end

@@ -4,17 +4,16 @@
 
 
 .video-show{
- float: left;
- width: 100%;
+
   transition: all .2s ease-in-out;
  box-sizing: border-box;
     border-radius: 5px;
 }
 
-.video-show:hover{
+.video-show:hover, 
+.video-show-list:hover{
     transform: scale(1.8); 
 margin-left: 100px;
-
 }
 
 .video-full{
@@ -180,6 +179,22 @@ margin-left: 100px;
   padding-top: 0;
     justify-content: flex-start;
     padding-left: 25px;
+      box-sizing: border-box;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.index-like-button{
+    display: flex;
+    align-content: center;
+    // height: 45px;
+    width: 99.9%;
+  background-color:  black;
+  margin-top: 0;
+    border: none;
+  padding-top: 0;
+    //   padding-left: 25px;
+    // justify-content: flex-start;
       box-sizing: border-box;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;

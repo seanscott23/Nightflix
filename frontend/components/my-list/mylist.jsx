@@ -6,23 +6,34 @@ class MyList extends React.Component {
     super(props);
   }
 
+componentDidMount(){
+  this.props.requestUserList(this.props.currentUser.id)
+}
+
+componentWillUnmount(){
+  this.props.clearList()
+}
+
+
   render() {
-    debugger
+
     return (
       <div className="video-container">
-        <section className="genre-section">
-          <div className="video-item-flex">
-            {this.props.search.map((video) => {
+      
+          <div className="list-video-item-flex">
+            {this.props.mylist.map((video) => {
               return (
                 <VideosItem
                   video={video}
                   key={video.id}
                   history={this.props.history}
+                  className="video-show-list"
+                  mylist = {true}
                 />
               );
             })}
           </div>
-        </section>
+
       </div>
     );
   }

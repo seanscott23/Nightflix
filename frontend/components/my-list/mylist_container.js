@@ -1,18 +1,21 @@
 import { connect } from "react-redux";
 
 import { withRouter } from "react-router-dom";
-import { requestList, addToMyList } from "../../actions/mylist_actions";
+import { requestUserList, addToMyList, clearList} from "../../actions/mylist_actions";
 import MyList from './mylist';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = (state) => {
+
   return {
-    currentUser: users[session.id],
+    currentUser: state.entities.users[state.session.id],
+    mylist: Object.values(state.entities.list)
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  requestList: (videos) => dispatch(requestList(videos)),
-  addToMyList: (videoId) => dispatch(addToMyList(videoId))
+  requestUserList: (userId) => dispatch(requestUserList(userId)),
+  addToMyList: (videoId) => dispatch(addToMyList(videoId)),
+  clearList: () => dispatch(clearList())
 });
 
 export default withRouter(

@@ -5,8 +5,12 @@ class VideosItem extends React.Component {
   constructor(props) {
     super(props);
     this.addToList = this.addToList.bind(this);
+    this.removeFromList = this.removeFromList.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.state = {
+        checked: false
+    }
   }
   
   handleMouseEnter(e) {
@@ -17,14 +21,38 @@ class VideosItem extends React.Component {
     e.currentTarget.pause();
   }
 
-  addToList(videoId){
-      debugger
-      this.addToMyList(this.props.video.id);
+  addToList(){
+      this.props.addToMyList(this.props.video.id, this.props.currentUser.id);
+     this.setState({
+         checked: true
+     })
   };
 
+  removeFromList(){
+      this.props.removeFromMyList(this.props.video.id, this.props,currentUser.id);
+      this.setState({
+          checked: false
+      })
+  }
+
+  toggleLike(e){
+      if (this.state.checked === true){
+        e.currentTarget.classList.remove("fas fa-plus-circle");
+        e.currentTarget.classList.add("far fa-check-circle");
+      } else {
+           e.currentTarget.classList.remove("far fa-check-circle");
+           e.currentTarget.classList.add("fas fa-plus-circle");
+      }   
+  }
+
+
   render() {
+
+    let mylistClass = this.props.mylist ? "video-show-list" : "video-show";
+    let toggleList = this.props.mylist ? this.addToList : this.removeFromList;
+
     return (
-      <div className="video-show">
+      <div className={mylistClass}>
         <h1 className="video-title">{this.props.video.title}</h1>
 
         <div
@@ -47,8 +75,8 @@ class VideosItem extends React.Component {
             ></source>
           </video>
           <div className="video-control-bar">
-            <button className="video-like-button" onClick={() => this.addToList(this.props.video.id)}>
-              <i className="fas fa-plus-circle"></i>
+            <button className="index-like-button" onClick={toggleList}>
+              <i className={this.toggleLike}></i>
             </button>
           </div>
         </div>

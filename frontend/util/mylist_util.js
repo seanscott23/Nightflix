@@ -1,14 +1,22 @@
-export const fetchLists = () => {
+export const fetchLists = (user_id) => {
  return $.ajax({
     method: "GET",
-    url: `/api/mylist`,
+    url: `/api/users/${user_id}/mylist`
   });
 };
 
-export const addListItem = (video_id) => {
+export const addListItem = (video_id, user_id) => {
   return  $.ajax({
       method: "POST",
-      url: `/api/mylist`,
-      data: {mylist: {video_id}}
+      url: `/api/users/${user_id}/mylist`,
+      data: {mylist: {video_id, user_id}}
     });
+}
+
+export const removeListItem = (video_id, user_id) => {
+  return $.ajax({
+    method: "DELETE",
+    url: `/api/users/${user_id}/mylist`,
+    data: {mylist: {video_id, user_id}}
+  })
 }

@@ -9,7 +9,6 @@ class VideosIndex extends React.Component {
 
     componentDidMount(){
         this.props.allVideos()
-     
     }
 
     render() {
@@ -24,7 +23,8 @@ class VideosIndex extends React.Component {
                     key={"action" + parseInt(video.id)}
                     video={video}
                     history={this.props.history}
-                  
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -36,7 +36,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"comedy" + parseInt(video.id)}
                     video={video}
-                
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -48,7 +49,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"fantasy" + parseInt(video.id)}
                     video={video}
-                   
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -60,7 +62,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"drama" + parseInt(video.id)}
                     video={video}
-             
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -72,7 +75,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"crime" + parseInt(video.id)}
                     video={video}
-                    // addToMyList={addToMyList}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -84,7 +88,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"science-fiction" + parseInt(video.id)}
                     video={video}
-                    // addToMyList={addToMyList}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -96,7 +101,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"thriller" + parseInt(video.id)}
                     video={video}
-                    // addToMyList={addToMyList}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -108,7 +114,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"family" + parseInt(video.id)}
                     video={video}
-                    // addToMyList={addToMyList}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}
@@ -120,7 +127,8 @@ class VideosIndex extends React.Component {
                   <VideosItem
                     key={"romance" + parseInt(video.id)}
                     video={video}
-                    // addToMyList={addToMyList}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
                   />
                 </div>
               ))}

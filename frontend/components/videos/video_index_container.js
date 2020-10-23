@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { addToMyList } from '../../actions/mylist_actions';
 import { showVideo, allVideos } from '../../actions/video_actions';
 import VideosIndex from './video_index';
 
@@ -23,7 +24,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        allVideos: () => dispatch(allVideos())
+        allVideos: () => dispatch(allVideos()),
+        addToMyList: (videoId, userId) => dispatch(addToMyList(videoId, userId))
     }
 };
 
