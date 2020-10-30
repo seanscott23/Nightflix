@@ -9,10 +9,10 @@ class VideosItem extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.state = {
-        checked: false
-    }
+      checked: false,
+    };
   }
-  
+
   handleMouseEnter(e) {
     e.currentTarget.play();
   }
@@ -21,35 +21,53 @@ class VideosItem extends React.Component {
     e.currentTarget.pause();
   }
 
-  addToList(){
-      this.props.addToMyList(this.props.video.id, this.props.currentUser.id);
-     this.setState({
-         checked: true
-     })
-  };
-
-  removeFromList(){
-      this.props.removeFromMyList(this.props.video.id, this.props,currentUser.id);
-      this.setState({
-          checked: false
-      })
+  addToList() {
+    this.props.addToMyList(this.props.video.id, this.props.currentUser.id);
+    this.props.containedWithinListIds === true;
+    this.setState({
+      checked: true,
+    });
   }
 
-  toggleLike(e){
-      if (this.state.checked === true){
-        e.currentTarget.classList.remove("fas fa-plus-circle");
-        e.currentTarget.classList.add("far fa-check-circle");
-      } else {
-           e.currentTarget.classList.remove("far fa-check-circle");
-           e.currentTarget.classList.add("fas fa-plus-circle");
-      }   
+  removeFromList() {
+    this.props.removeFromMyList(
+      this.props.video.id,
+      this.props.currentUser.id
+    );
+    this.props.containedWithinListIds === false;
+    this.setState({
+      checked: false,
+    });
   }
 
+  componentDidMount() {
+
+    this.props.requestUserList(this.props.currentUser.id).then((data) => {
+       
+      data = Object.values(data.videos);
+    
+      for (let index = 0; index < data.length; index++) {
+        const video = data[index];
+        if (video.id === this.props.video.id) {
+          this.setState({
+            checked: true,
+          });
+        }
+      }
+    });
+  }
 
   render() {
 
     let mylistClass = this.props.mylist ? "video-show-list" : "video-show";
-    let toggleList = this.props.mylist ? this.addToList : this.removeFromList;
+
+    let toggleLike = this.state.checked
+      ? "far fa-check-circle"
+      : "fas fa-plus-circle";
+
+    let toggleList = this.props.containedWithinListIds
+      ? this.removeFromList
+      : this.addToList;
 
     return (
       <div className={mylistClass}>
@@ -74,11 +92,11 @@ class VideosItem extends React.Component {
               type="video/mp4"
             ></source>
           </video>
-          <div className="video-control-bar">
-            <button className="index-like-button" onClick={toggleList}>
-              <i className={this.toggleLike}></i>
-            </button>
-          </div>
+        </div>
+        <div className="video-control-bar">
+          <button className="index-like-button" onClick={toggleList}>
+            <i className={toggleLike}></i>
+          </button>
         </div>
       </div>
     );

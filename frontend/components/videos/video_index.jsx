@@ -25,6 +25,8 @@ class VideosIndex extends React.Component {
                     history={this.props.history}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -38,6 +40,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -51,6 +55,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -64,6 +70,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -77,6 +85,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -90,6 +100,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -103,6 +115,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -116,6 +130,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}
@@ -129,6 +145,8 @@ class VideosIndex extends React.Component {
                     video={video}
                     addToMyList={this.props.addToMyList}
                     currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
                   />
                 </div>
               ))}

@@ -1,4 +1,4 @@
-import { ADD_LIST_ITEM, FETCH_LISTS, CLEAR_LIST, REMOVE_LIST_ITEM } from "../actions/mylist_actions";
+import { ADD_LIST_ITEM, FETCH_LIST, CLEAR_LIST, REMOVE_LIST_ITEM } from "../actions/mylist_actions";
 
 const ListReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -6,11 +6,10 @@ const ListReducer = (oldState = {}, action) => {
   switch (action.type) {
     case ADD_LIST_ITEM:
       return Object.assign({}, oldState, action.video);
-    case FETCH_LISTS:
+    case FETCH_LIST:
       return Object.assign({}, oldState, action.videos);
     case REMOVE_LIST_ITEM:
-      delete newState[action.video]
-      return newState
+      return Object.assign({}, oldState, action.videos);
     case CLEAR_LIST:
       return {}
     default:

@@ -10,12 +10,22 @@ componentDidMount(){
   this.props.requestUserList(this.props.currentUser.id)
 }
 
+componentDidUpdate(prevProps){
+debugger
+  if (prevProps.mylist.length !== this.props.mylist.length) 
+  {
+    this.props.requestUserList(this.props.currentUser.id);
+  }
+ 
+}
+
 componentWillUnmount(){
   this.props.clearList()
 }
 
 
   render() {
+    let listIds = this.props.mylist.map((video) => {return video.id})
 
     return (
       <div className="video-container">
@@ -24,11 +34,15 @@ componentWillUnmount(){
             {this.props.mylist.map((video) => {
               return (
                 <VideosItem
+                  containedWithinListIds= {listIds.includes(video.id)}
                   video={video}
                   key={video.id}
                   history={this.props.history}
+                  currentUser={this.props.currentUser}
                   className="video-show-list"
-                  mylist = {true}
+                  removeFromMyList={this.props.removeFromMyList}
+                  requestUserList={this.props.requestUserList}
+                  mylist={true}
                 />
               );
             })}

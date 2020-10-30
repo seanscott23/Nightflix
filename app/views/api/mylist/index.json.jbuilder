@@ -1,3 +1,4 @@
+
 @mylist.each do |like|
     json.set! like.id do 
         json.id   like.video.id

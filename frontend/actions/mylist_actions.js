@@ -1,12 +1,12 @@
 import * as APIUtil from "../util/mylist_util";
 
-export const FETCH_LISTS = "FETCH_LISTS";
+export const FETCH_LIST = "FETCH_LIST";
 export const ADD_LIST_ITEM = "ADD_LIST_ITEM";
 export const CLEAR_LIST = "CLEAR_LIST";
 export const REMOVE_LIST_ITEM = "REMOVE_LIST_ITEM";
 
 const receiveList = (videos) => ({
-  type: FETCH_LISTS,
+  type: FETCH_LIST,
   videos,
 });
 
@@ -15,9 +15,9 @@ const addToList = (video) => ({
   video,
 });
 
-const removeFromList = (video) => ({
+const removeFromList = (videos) => ({
   type: REMOVE_LIST_ITEM,
-  video
+  videos
 })
 
 const clear = () => ({
@@ -26,7 +26,7 @@ const clear = () => ({
 
 
 export const requestUserList = (userId) => (dispatch) => {
-  return APIUtil.fetchLists(userId).then((videos) => dispatch(receiveList(videos)));
+  return APIUtil.fetchList(userId).then((videos) => dispatch(receiveList(videos)));
 };
 
 
@@ -35,7 +35,7 @@ export const addToMyList = (videoId, userId) => (dispatch) => {
 };
 
 export const removeFromMyList = (videoId, userId) => (dispatch) => {
-  return APIUtil.removeListItem(videoId, userId).then((video) => dispatch(removeFromList(video)));
+  return APIUtil.removeListItem(videoId, userId).then((videos) => dispatch(removeFromList(videos)));
 };
 
 
