@@ -7,9 +7,11 @@ import MyList from './mylist';
 const mapStateToProps = (state) => {
 
   return {
+   
     currentUser: state.entities.users[state.session.id],
     mylist: Object.values(state.entities.list)
   };
+ 
 };
 
 const mapDispatchToProps = (dispatch) => ({

@@ -9,7 +9,7 @@ const ListReducer = (oldState = {}, action) => {
     case FETCH_LIST:
       return Object.assign({}, oldState, action.videos);
     case REMOVE_LIST_ITEM:
-      return Object.assign({}, oldState, action.videos);
+      return Object.assign({}, action.videos);
     case CLEAR_LIST:
       return {}
     default:

@@ -38,6 +38,7 @@ class VideosItem extends React.Component {
     this.setState({
       checked: false,
     });
+    this.props.requestUserList(this.props.currentUser.id);
   }
 
   componentDidMount() {

@@ -10,14 +10,22 @@ componentDidMount(){
   this.props.requestUserList(this.props.currentUser.id)
 }
 
-componentDidUpdate(prevProps){
-debugger
-  if (prevProps.mylist.length !== this.props.mylist.length) 
-  {
-    this.props.requestUserList(this.props.currentUser.id);
-  }
+// componentWillReceiveProps(){
+
+// }
+
+// shouldComponentUpdate(){
+
+// }
+
+// componentDidUpdate(prevProps){
+
+//   // if (prevProps.mylist.length !== this.props.mylist.length) 
+//   // {
+//   //   this.props.requestUserList(this.props.currentUser.id);
+//   // }
  
-}
+// }
 
 componentWillUnmount(){
   this.props.clearList()
