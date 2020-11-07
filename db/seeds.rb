@@ -72,3 +72,76 @@ demo_video13.video.attach(io: file, filename: 'harry-potter-and-the-sorcerer-s-v
 demo_video14 = Video.create!(title: 'The Pursuit of Happiness', genre: "Drama", description: "comedy")
 file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/pursuit_of_happiness.mp4')
 demo_video14.video.attach(io: file, filename: 'pursuit_of_happiness.mp4')
+
+
+demo_video15 = Video.create!(title: 'Avatar', genre: "Action, Fantasy", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/AVATAR+Official+Final+Trailer+(2009)+James+Cameron+Sci-Fi+Action+Movie+HD.mp4')
+demo_video15.video.attach(io: file, filename: 'Avatar.mp4')
+
+demo_video16 = Video.create!(title: 'Bohemian Rhapsody', genre: "Drama", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Bohemian+Rhapsody+Official+Trailer+%5BHD%5D+20th+Century+FOX.mp4')
+demo_video16.video.attach(io: file, filename: 'Bohemian-Rhapsody.mp4')
+
+demo_video17 = Video.create!(title: 'Catch Me If You Can', genre: "Crime", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Catch+Me+if+You+Can+(2002)+Trailer+%231+Movieclips+Classic+Trailers.mp4')
+demo_video17.video.attach(io: file, filename: 'Catch Me If You Can.mp4')
+
+demo_video18 = Video.create!(title: 'Chef', genre: "Drama, Comedy", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Chef+Official+Trailer+%231+(2014)+-+Scarlett+Johansson%2C+Robert+Downey+Jr.+Movie+HD.mp4')
+demo_video18.video.attach(io: file, filename: 'Chef.mp4')
+
+demo_video19 = Video.create!(title: 'Coach Carter', genre: "Drama", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Coach+Carter+(2005)+Trailer+%231+Movieclips+Classic+Trailers.mp4')
+demo_video19.video.attach(io: file, filename: 'Coach-Carter.mp4')
+
+demo_video20 = Video.create!(title: 'Dallas Buyers Club', genre: "Drama", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Dallas+Buyers+Club+-+Official+Trailer+(HD)+Matthew+McConaughey.mp4')
+demo_video20.video.attach(io: file, filename: 'Dallay-Buyers-Club.mp4')
+
+demo_video21 = Video.create!(title: 'Gladiator', genre: "Action, Adventure", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Gladiator+trailer.mp4')
+demo_video21.video.attach(io: file, filename: 'Gladiator.mp4')
+
+demo_video22 = Video.create!(title: 'Green Book', genre: "Comedy, Drama", description: "comedy")
+file = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/Green+Book+-+Official+Trailer+%5BHD%5D.mp4')
+demo_video22.video.attach(io: file, filename: 'Green-Book.mp4')
+
+demo_video23 = Video.create!(title: "Molly's Game", genre: "Comedy, Drama", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Molly's+Game+Official+Trailer+Own+it+Now+on+Digital+HD%2C+Blu-ray+%26+DVD.mp4")
+demo_video23.video.attach(io: file, filename: 'Mollys-Game.mp4')
+
+demo_video24 = Video.create!(title: 'Moneyball', genre: "Drama", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Moneyball+(2011)+Movie+Trailer+-+HD+-+Brad+Pitt.mp4")
+demo_video24.video.attach(io: file, filename: 'Moneyball.mp4')
+
+demo_video24 = Video.create!(title: 'Mrs. Doubtfire', genre: "Comedy, Family", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Mrs.+Doubtfire+(1993)+Trailer+%231+Movieclips+Classic+Trailers+(1).mp4")
+demo_video24.video.attach(io: file, filename: 'Mrs.-Doubtfire.mp4')
+
+demo_video25 = Video.create!(title: 'Cars', genre: "Comedy, Family", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Official+Trailer+Cars+(2006).mp4")
+demo_video25.video.attach(io: file, filename: 'Cars.mp4')
+
+demo_video26 = Video.create!(title: 'Slumdog Millionaire', genre: "Drama, Romance", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/SLUMDOG+MILLIONAIRE+-+Trailer.mp4")
+demo_video26.video.attach(io: file, filename: 'Slumdog-Millionaire.mp4')
+
+demo_video27 = Video.create!(title: 'Spirited Away', genre: "Fantasy", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Spirited+Away+-+Official+Trailer+(1).mp4")
+demo_video27.video.attach(io: file, filename: 'Spirited-Away.mp4')
+
+demo_video28 = Video.create!(title: 'Spotlight', genre: "Drama", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Spotlight+TRAILER+1+(2015)+-+Mark+Ruffalo%2C+Michael+Keaton+Movie+HD.mp4")
+demo_video28.video.attach(io: file, filename: 'Spotlight.mp4')
+
+demo_video29 = Video.create!(title: 'The Lord Of The Rings: Return Of The King', genre: "Fantasy", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/The+Lord+of+the+Rings+The+Return+of+the+King+Official+Trailer+%231+-+(2003)+HD.mp4")
+demo_video29.video.attach(io: file, filename: 'Lord-of-the-rings.mp4')
+
+demo_video30 = Video.create!(title: 'The Lincoln Lawyer', genre: "Crime, Thriller", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/The+Lincoln+Lawyer+(2011)+-+Official+Trailer+%231.mp4")
+demo_video30.video.attach(io: file, filename: 'The-Lincoln-Lawyer.mp4')
+
+demo_video31 = Video.create!(title: 'Willy Wonka', genre: "Fantasy", description: "comedy")
+file = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/willy_wonka.mp4")
+demo_video31.video.attach(io: file, filename: 'Willy-Wonka.mp4')
