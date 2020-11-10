@@ -12,8 +12,16 @@
 
 .video-show:hover, 
 .video-show-list:hover{
+transform: scale(1.8); 
+transform-origin: center;
+z-index: 3;
+}
+
+.video-item:first-child:hover > .video-show{
+    transform-origin: center left;
     transform: scale(1.8); 
-margin-left: 100px;
+   
+    z-index: 3;
 }
 
 .video-full{
@@ -55,7 +63,7 @@ margin-left: 100px;
 
 .video-container{
     width: 100%;
-    margin-top: 68px;
+    // margin-top: 68px;
     display: block;
     padding-top: 40px;
     padding-bottom: 150px;
@@ -232,20 +240,29 @@ button:focus {outline:0;}
 .genre-section{
     width: 100%;
     overflow: hidden;
-    height: 170px;
+    height: 100%;
     // display: grid;
     // display: block;
-    grid-template-columns: repeat(3, 100%);
+    // grid-template-columns: repeat(3, 100%);
+    background-color: transparent;
+    padding-left: 50px;
+}
+
+.genre-section-action{
+      width: 100%;
+    overflow: hidden;
+    height: 100%;
+
     background-color: transparent;
     margin-top: 68px;
-    padding-left: 110px;
+    padding-left: 50px;
 }
 
 .carouselRow{
     width: 100%;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(7, auto);
+    // display: grid;
+    // grid-template-columns: repeat(7, auto);
     margin: 20px 0;
 }
 
@@ -261,20 +278,6 @@ section a{
 }
 
 
-// section:nth-child(1){
-// top: 0;
-// bottom: 0;
-// left: 0;
-// background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1), 100%);
-// }
-
-// section:nth-child(2){
-// top: 0;
-// bottom: 0;
-// right: 0;
-// background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1), 100%) ;
-// }
-
 #section1{
     transition: -100%;
 }
@@ -285,6 +288,78 @@ section a{
 }
 
 .arrowButton{
-    width:100px;
-    height: 100px;
+    display: none;
+}
+
+.genre-section-action:hover >
+.arrowButton{
+    display: inline-block;
+     width:30px;
+    height: 30px;
+    color: white;
+    font-size: 3em;
+ position: absolute;
+}
+
+.genre-section:hover
+.arrowButton{
+    display: inline-block;
+     width:30px;
+    height: 30px;
+    color: white;
+    font-size: 3em;
+ position: absolute;
+
+}
+
+
+
+.fa-chevron-left{
+    margin-top: 55px;
+    float: left;
+    position: absolute;
+}
+
+.fa-chevron-right{
+    margin-top: 55px;
+    float: right;
+    margin-right: 50px;
+    position: absolute;
+}
+
+.homeVideoPreview{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: static;
+}
+
+
+
+.homeVideoPreview .PreviewTitle{
+    color: white;
+     font-size: 36px;
+     left: 0;
+    margin: 350px 0px 0px 20px;
+    z-index: 4;
+ 
+    position: absolute;
+    display: block;
+}
+
+.videoDescription{
+    color: white;
+     font-size: 24px;
+     left: 0;
+     width: 30%;
+    margin: 400px 0px 0px 20px;
+    z-index: 4;
+    position: absolute;
+    display: block;
+}
+
+
+video {
+    object-fit: fill;
 }
