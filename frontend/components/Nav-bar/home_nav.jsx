@@ -37,13 +37,20 @@ render(){
               <h1 id="nightflix-logo">NIGHTFLIX</h1>
               <ul className="home-tabs">
                 <li>
-                  {" "}
                   <Link className="home-link" to={"/videos"}>
                     Home
                   </Link>
                 </li>
-                <li>TV Shows</li>
-                <li>Movies</li>
+                <li>
+                  <Link className="tv-link" to={"/TvShows"}>
+                    TV Shows
+                    </Link>
+                </li>
+                <li>
+                  <Link className="movies-link" to={"/movies"}>
+                    Movies
+                  </Link>
+                </li>
                 <li>
                   <Link className="list-link" to={"/mylist"}>
                     My List

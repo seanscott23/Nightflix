@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-    validates :title, :genre, :description, presence:true
+    validates :title, :genre, :video_type, presence:true
 
     has_many :genres,
         foreign_key: :video_id,

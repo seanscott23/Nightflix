@@ -10,17 +10,23 @@
     border-radius: 5px;
 }
 
-.video-show:hover, 
+.video-show:hover,
 .video-show-list:hover{
 transform: scale(1.8); 
 transform-origin: center;
 z-index: 3;
 }
 
-.video-item:first-child:hover > .video-show{
-    transform-origin: center left;
-    transform: scale(1.8); 
-   
+.video-item:nth-child(1):hover .video-show{
+transform: scale(1.8); 
+transform-origin: center left;
+z-index: 3;
+}
+
+
+.video-item:nth-child(6):hover .video-show{
+    transform-origin: center right;
+    transform: scale(1.8);
     z-index: 3;
 }
 
@@ -241,18 +247,14 @@ button:focus {outline:0;}
     width: 100%;
     overflow: hidden;
     height: 100%;
-    // display: grid;
-    // display: block;
-    // grid-template-columns: repeat(3, 100%);
     background-color: transparent;
     padding-left: 50px;
 }
 
 .genre-section-action{
-      width: 100%;
+    width: 100%;
     overflow: hidden;
     height: 100%;
-
     background-color: transparent;
     margin-top: 68px;
     padding-left: 50px;
@@ -261,8 +263,6 @@ button:focus {outline:0;}
 .carouselRow{
     width: 100%;
     position: relative;
-    // display: grid;
-    // grid-template-columns: repeat(7, auto);
     margin: 20px 0;
 }
 
@@ -288,18 +288,20 @@ section a{
 }
 
 .arrowButton{
-    display: none;
+    display: none;  
 }
 
-.genre-section-action:hover >
-.arrowButton{
-    display: inline-block;
-     width:30px;
-    height: 30px;
-    color: white;
-    font-size: 3em;
- position: absolute;
+.genre-section-action:hover
+    .arrowButton{
+        display: inline-block;
+        width:30px;
+        height: 30px;
+        color: white;   
+        font-size: 3em;
+        position: absolute;
 }
+
+
 
 .genre-section:hover
 .arrowButton{
@@ -309,7 +311,6 @@ section a{
     color: white;
     font-size: 3em;
  position: absolute;
-
 }
 
 

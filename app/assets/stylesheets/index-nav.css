@@ -51,7 +51,9 @@ input:focus {
 }
 
 .home-link,
-.list-link{
+.list-link,
+.movies-link,
+.tv-link{
   text-decoration: none;
   color: white;
   font: sans-serif;

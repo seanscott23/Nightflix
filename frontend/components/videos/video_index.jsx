@@ -13,10 +13,8 @@ class VideosIndex extends React.Component {
           fantasy: 0,
           crime: 0,
           romance: 0,
-          thriller: 0,
           science: 0,
-          drama: 0,
-          adventure: 0
+          drama: 0
         }
     }
 
@@ -90,15 +88,14 @@ class VideosIndex extends React.Component {
                     />
                   </div>
                 ))}
-             
               </section>
-                 <div
-                  className="arrowButton"
-                  onClick={() => this.changeCarouselIndex("action", 1)}
-                >
-                  {" "}
-                  <i class="fas fa-chevron-right"></i>
-                </div>
+              <div
+                className="arrowButton"
+                onClick={() => this.changeCarouselIndex("action", 1)}
+              >
+                {" "}
+                <i class="fas fa-chevron-right"></i>
+              </div>
             </div>
             <div className="genre-section">
               <h1 className="genre-title">Comedies</h1>
@@ -269,76 +266,6 @@ class VideosIndex extends React.Component {
                 <div
                   className="arrowButton"
                   onClick={() => this.changeCarouselIndex("science", 1)}
-                >
-                  {" "}
-                  <i class="fas fa-chevron-right"></i>
-                </div>
-              </section>
-            </div>
-            <div className="genre-section">
-              <h1 className="genre-title">Thriller</h1>
-              <section className="carouselRow">
-                <div
-                  className="arrowButton"
-                  onClick={() => this.changeCarouselIndex("thriller", -1)}
-                >
-                  {" "}
-                  <i class="fas fa-chevron-left"></i>
-                </div>
-                {this.props.Thriller.slice(
-                  this.state.thriller,
-                  this.state.thriller + 6
-                ).map((video) => (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"thriller" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                ))}
-                <div
-                  className="arrowButton"
-                  onClick={() => this.changeCarouselIndex("thriller", 1)}
-                >
-                  {" "}
-                  <i class="fas fa-chevron-right"></i>
-                </div>
-              </section>
-            </div>
-            <div className="genre-section">
-              <h1 className="genre-title">Family</h1>
-              <section className="carouselRow">
-                <div
-                  className="arrowButton"
-                  onClick={() => this.changeCarouselIndex("family", -1)}
-                >
-                  {" "}
-                  <i class="fas fa-chevron-left"></i>
-                </div>
-                {this.props.Family.slice(
-                  this.state.family,
-                  this.state.family + 6
-                ).map((video) => (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"family" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                ))}
-                <div
-                  className="arrowButton"
-                  onClick={() => this.changeCarouselIndex("family", 1)}
                 >
                   {" "}
                   <i class="fas fa-chevron-right"></i>
