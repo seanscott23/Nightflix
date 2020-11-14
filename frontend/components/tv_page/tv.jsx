@@ -41,47 +41,45 @@ class tvShows extends React.Component {
   }
 
   render() {
+
     // debugger
+
     return (
       <div className="video-container">
         <div className="genre-section-action">
           <h1 className="genre-title">Action</h1>
-          <div
-            className="arrowButton"
-            onClick={() => this.changeCarouselIndex("action", -1)}
-          >
-            {" "}
-            <i class="fas fa-chevron-left"></i>
-          </div>
           <section className="carouselRow">
-            {this.props.Action.slice(
-              this.state.action,
-              this.state.action + 6
-            ).map((video) => {
-              if (this.props.shows.includes(video)) {
-                return (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"action" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                );
-              }
-            })}
+            <div
+              className="arrowButton"
+              onClick={() => this.changeCarouselIndex("action", -1)}
+            >
+              {" "}
+              <i class="fas fa-chevron-left"></i>
+            </div>
+
+            {this.props.shows.map((video) =>
+              video.genre.includes("Action") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
+            )}
+            <div
+              className="arrowButton"
+              onClick={() => this.changeCarouselIndex("action", 1)}
+            >
+              {" "}
+              <i class="fas fa-chevron-right"></i>
+            </div>
           </section>
-          <div
-            className="arrowButton"
-            onClick={() => this.changeCarouselIndex("action", 1)}
-          >
-            {" "}
-            <i class="fas fa-chevron-right"></i>
-          </div>
         </div>
         <div className="genre-section">
           <h1 className="genre-title">Comedies</h1>
@@ -93,26 +91,21 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Comedy.slice(
-              this.state.comedy,
-              this.state.comedy + 6
-            ).map((video) => {
-              if (video.video_type === "TV") {
-                return (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"action" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                );
-              }
-            })}
+            {this.props.shows.map((video) =>
+              video.genre.includes("Comedy") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
+            )}
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("comedy", 1)}
@@ -132,26 +125,21 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Fantasy.slice(
-              this.state.fantasy,
-              this.state.fantasy + 6
-            ).map((video) => {
-              if (video.video_type === "TV") {
-                return (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"action" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                );
-              }
-            })}
+            {this.props.shows.map((video) =>
+              video.genre.includes("Fantasy") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
+            )}
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("fantasy", 1)}
@@ -171,24 +159,20 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Drama.slice(this.state.drama, this.state.drama + 6).map(
-              (video) => {
-                if (video.video_type === "TV") {
-                  return (
-                    <div className="video-item">
-                      <VideosItem
-                        key={"action" + parseInt(video.id)}
-                        video={video}
-                        history={this.props.history}
-                        addToMyList={this.props.addToMyList}
-                        currentUser={this.props.currentUser}
-                        removeFromMyList={this.props.removeFromMyList}
-                        requestUserList={this.props.requestUserList}
-                      />
-                    </div>
-                  );
-                }
-              }
+            {this.props.shows.map((video) =>
+              video.genre.includes("Drama") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
             )}
             <div
               className="arrowButton"
@@ -209,24 +193,20 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Crime.slice(this.state.crime, this.state.crime + 6).map(
-              (video) => {
-                if (video.video_type === "TV") {
-                  return (
-                    <div className="video-item">
-                      <VideosItem
-                        key={"action" + parseInt(video.id)}
-                        video={video}
-                        history={this.props.history}
-                        addToMyList={this.props.addToMyList}
-                        currentUser={this.props.currentUser}
-                        removeFromMyList={this.props.removeFromMyList}
-                        requestUserList={this.props.requestUserList}
-                      />
-                    </div>
-                  );
-                }
-              }
+            {this.props.shows.map((video) =>
+              video.genre.includes("Crime") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
             )}
             <div
               className="arrowButton"
@@ -247,26 +227,21 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Science.slice(
-              this.state.science,
-              this.state.science + 6
-            ).map((video) => {
-              if (video.video_type === "TV") {
-                return (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"action" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                );
-              }
-            })}
+            {this.props.shows.map((video) =>
+              video.genre.includes("Science") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
+            )}
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("science", 1)}
@@ -286,26 +261,21 @@ class tvShows extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Romance.slice(
-              this.state.romance,
-              this.state.romance + 6
-            ).map((video) => {
-              if (video.video_type === "TV") {
-                return (
-                  <div className="video-item">
-                    <VideosItem
-                      key={"action" + parseInt(video.id)}
-                      video={video}
-                      history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
-                    />
-                  </div>
-                );
-              }
-            })}
+            {this.props.shows.map((video) =>
+              video.genre.includes("Romance") ? (
+                <div className="video-item">
+                  <VideosItem
+                    key={"action" + parseInt(video.id)}
+                    video={video}
+                    history={this.props.history}
+                    addToMyList={this.props.addToMyList}
+                    currentUser={this.props.currentUser}
+                    removeFromMyList={this.props.removeFromMyList}
+                    requestUserList={this.props.requestUserList}
+                  />
+                </div>
+              ) : null
+            )}
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("romance", 1)}

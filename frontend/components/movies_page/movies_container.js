@@ -14,17 +14,37 @@ const mapStateToProps = (state) => {
   // debugger
   return {
     currentUser: state.entities.users[state.session.id],
-     mylist: Object.values(state.entities.list),
-    movies: Object.values(state.entities.videos),
-        Comedy: Object.values(state.entities.videos).filter(video => video.genre.includes("Comedy")),
-        Action: Object.values(state.entities.videos).filter(video => video.genre.includes("Action")),
-        Adventure: Object.values(state.entities.videos).filter(video => video.genre.includes("Adventure")),
-        Fantasy: Object.values(state.entities.videos).filter(video => video.genre.includes("Fantasy")),
-        Romance: Object.values(state.entities.videos).filter(video => video.genre.includes("Romance")),
-        Drama: Object.values(state.entities.videos).filter(video => video.genre.includes("Drama")),
-        Crime: Object.values(state.entities.videos).filter(video => video.genre.includes("Crime")),
-        Science: Object.values(state.entities.videos).filter(video => video.genre.includes("Science")),
-        Family: Object.values(state.entities.videos).filter(video => video.genre.includes("Family"))
+    mylist: Object.values(state.entities.list),
+    movies: Object.values(state.entities.videos).filter(
+      (video) => video.video_type === "movie"
+    ),
+    Comedy: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Comedy")
+    ),
+    Action: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Action")
+    ),
+    Adventure: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Adventure")
+    ),
+    Fantasy: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Fantasy")
+    ),
+    Romance: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Romance")
+    ),
+    Drama: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Drama")
+    ),
+    Crime: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Crime")
+    ),
+    Science: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Science")
+    ),
+    Family: Object.values(state.entities.videos).filter((video) =>
+      video.genre.includes("Family")
+    ),
   };
 };
 

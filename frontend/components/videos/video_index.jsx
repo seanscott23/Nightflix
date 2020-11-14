@@ -64,14 +64,14 @@ class VideosIndex extends React.Component {
             </div>
             <div className="genre-section-action">
               <h1 className="genre-title">Action</h1>
-              <div
-                className="arrowButton"
-                onClick={() => this.changeCarouselIndex("action", -1)}
-              >
-                {" "}
-                <i class="fas fa-chevron-left"></i>
-              </div>
               <section className="carouselRow">
+                <div
+                  className="arrowButton"
+                  onClick={() => this.changeCarouselIndex("action", -1)}
+                >
+                  {" "}
+                  <i class="fas fa-chevron-left"></i>
+                </div>
                 {this.props.Action.slice(
                   this.state.action,
                   this.state.action + 6
@@ -88,14 +88,14 @@ class VideosIndex extends React.Component {
                     />
                   </div>
                 ))}
+                <div
+                  className="arrowButton"
+                  onClick={() => this.changeCarouselIndex("action", 1)}
+                >
+                  {" "}
+                  <i class="fas fa-chevron-right"></i>
+                </div>
               </section>
-              <div
-                className="arrowButton"
-                onClick={() => this.changeCarouselIndex("action", 1)}
-              >
-                {" "}
-                <i class="fas fa-chevron-right"></i>
-              </div>
             </div>
             <div className="genre-section">
               <h1 className="genre-title">Comedies</h1>

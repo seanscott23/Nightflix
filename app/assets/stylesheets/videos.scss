@@ -12,21 +12,28 @@
 
 .video-show:hover,
 .video-show-list:hover{
-transform: scale(1.8); 
+transform: scale(1.4); 
 transform-origin: center;
 z-index: 3;
+
 }
 
-.video-item:nth-child(1):hover .video-show{
-transform: scale(1.8); 
+
+.video-item:nth-child(2):hover .video-show{
+transform: scale(1.4); 
 transform-origin: center left;
 z-index: 3;
+
+}
+
+.video-item:nth-child(2):hover .genre-title{
+    color:black;
 }
 
 
-.video-item:nth-child(6):hover .video-show{
+.video-item:nth-child(7):hover .video-show{
     transform-origin: center right;
-    transform: scale(1.8);
+    transform: scale(1.4);
     z-index: 3;
 }
 
@@ -41,9 +48,10 @@ z-index: 3;
 
 .video-item{
     display: inline-block;
-    height: 150px;
+    height: 200px;
     cursor: pointer;
     padding: 0 2px;
+    z-index: 5;
 }
 
 .video-item-flex{
@@ -60,6 +68,8 @@ z-index: 3;
      font-size: 20px;
      margin-bottom: 15px;
 }
+
+
 
 #root{
     background-color: #141414;
@@ -102,13 +112,14 @@ z-index: 3;
   height: 35px;
   display: flex;
   background-color:  black;
-  margin-top: 0;
+  margin-top: -5px;
   padding-top: 0;
-  width: 219px;
+  width: 219.4px;
     justify-content: flex-start;
     padding-left: 25px;
      box-sizing: border-box;
-    border-radius: 3px;
+     border-bottom-left-radius: 3px;
+     border-bottom-right-radius: 3px;
 }
 
 .video-show-list:hover >
@@ -263,7 +274,7 @@ button:focus {outline:0;}
 .carouselRow{
     width: 100%;
     position: relative;
-    margin: 20px 0;
+    // margin: 20px 0;
 }
 
 section a{
@@ -317,7 +328,7 @@ section a{
 
 .fa-chevron-left{
     margin-top: 55px;
-    float: left;
+    left: -30px;
     position: absolute;
 }
 

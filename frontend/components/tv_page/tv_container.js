@@ -12,7 +12,7 @@ import { allVideos } from "../../actions/video_actions";
 import tvShows from "./tv";
 
 const mapStateToProps = (state) => {
-
+// debugger
   return {
     currentUser: state.entities.users[state.session.id],
     mylist: Object.values(state.entities.list),
