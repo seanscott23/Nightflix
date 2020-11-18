@@ -20,6 +20,7 @@ class VideosIndex extends React.Component {
 
     componentDidMount(){
         this.props.allVideos()
+        this.props.requestUserList(this.props.currentUser.id)
     }
 
     changeCarouselIndex(category, number){
@@ -44,6 +45,10 @@ class VideosIndex extends React.Component {
  
 
     render() {
+
+        let itemIds = this.props.listItems.map((video) => {
+          return video.id;
+        });
      
         return (
           <div className="video-container">
@@ -84,7 +89,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -119,7 +125,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -154,7 +161,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -189,7 +197,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -224,7 +233,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -259,7 +269,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}
@@ -294,7 +305,8 @@ class VideosIndex extends React.Component {
                       addToMyList={this.props.addToMyList}
                       currentUser={this.props.currentUser}
                       removeFromMyList={this.props.removeFromMyList}
-                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                      containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}

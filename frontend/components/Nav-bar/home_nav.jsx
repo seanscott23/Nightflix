@@ -14,16 +14,19 @@ class HomeNav extends React.Component{
     
   handleSubmit(e){
     e.preventDefault();
-    console.log("hit the submit");
-    this.props.fetchSearchResults(this.state.search);
-    this.setState({
-      searched: true
-    }) 
+    // console.log("hit the submit");
+    this.props.fetchSearchResults(this.state.search).then(() => {
+   this.setState({
+     searched: true,
+   }); 
+
+    })
+ 
   }
 
 handleUpdate(e){
   e.preventDefault();
-  console.log("hit the update");
+  // console.log("hit the update");
   this.setState({
     search: e.currentTarget.value,
   });
@@ -31,6 +34,7 @@ handleUpdate(e){
 
 render(){
   let redirectToResults = this.state.searched ? <Redirect to="/search" /> : null;
+
         return (
           <nav className="home-nav-bar">
             <div className="left-nav">

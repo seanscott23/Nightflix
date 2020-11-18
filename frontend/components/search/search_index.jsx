@@ -19,9 +19,11 @@ class SearchPage extends React.Component {
             {this.props.search.map((video) => {
               return (
                 <VideosItem
+                  currentUser={this.props.currentUser}
                   video={video}
                   key={video.id}
                   history={this.props.history}
+                  requestUserList={this.props.requestUserList}
                 />
               );
             })}

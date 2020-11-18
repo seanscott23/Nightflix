@@ -22,53 +22,71 @@ class VideosItem extends React.Component {
   }
 
   addToList() {
-    this.props.addToMyList(this.props.video.id, this.props.currentUser.id);
-    this.props.containedWithinListIds === true;
-    this.setState({
-      checked: true,
-    });
+    this.props.addToMyList(this.props.video.id, this.props.currentUser.id).then(() =>{
+ this.setState({
+   checked: true,
+ })
+    this.props.containedWithinListIds = true;
+    })
+ 
+   
   }
 
   removeFromList() {
     this.props.removeFromMyList(
       this.props.video.id,
       this.props.currentUser.id
-    );
-    this.props.containedWithinListIds === false;
-    this.setState({
-      checked: false,
-    });
+    ).then(() => {
+  this.setState({
+    checked: false,
+  });
+    })
     this.props.requestUserList(this.props.currentUser.id);
+      this.props.containedWithinListIds = false;
   }
 
-  componentDidMount() {
+//   componentDidMount() {
+// // debugger
+//     this.props.requestUserList(this.props.currentUser.id).then((data) => {
+//       data = Object.values(data.videos);
+//       for (let index = 0; index < data.length; index++) {
+//         const video = data[index];
+//         if (video.id === this.props.video.id) {
+//           this.setState({
+//             checked: true,
+//           });
+//         }
+//       }
+//     });
+//   }
 
-    this.props.requestUserList(this.props.currentUser.id).then((data) => {
-       
-      data = Object.values(data.videos);
-    
-      for (let index = 0; index < data.length; index++) {
-        const video = data[index];
-        if (video.id === this.props.video.id) {
-          this.setState({
-            checked: true,
-          });
-        }
-      }
-    });
-  }
+//   componentDidUpdate(prevProps, prevState){
+//     //   debugger
+//     if(prevState.checked !== this.state.checked){
+//         return this.state.checked
+//     }
+//   }
 
   render() {
+   
 
     let mylistClass = this.props.mylist ? "video-show-list" : "video-show";
 
-    let toggleLike = this.state.checked
+     let itemIds = this.props.listItems.map((video) => {
+        return video.id
+    })
+
+    let toggleLike = itemIds.includes(this.props.video.id)
       ? "far fa-check-circle"
       : "fas fa-plus-circle";
 
-    let toggleList = this.props.containedWithinListIds
+  
+
+    let toggleList = itemIds.includes(this.props.video.id)
       ? this.removeFromList
       : this.addToList;
+
+
 
     return (
       <div className={mylistClass}>

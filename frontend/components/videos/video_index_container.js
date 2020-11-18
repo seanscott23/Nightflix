@@ -18,7 +18,8 @@ const mapStateToProps = (state) => {
         Crime: Object.values(state.entities.videos).filter(video => video.genre.includes("Crime")),
         Science: Object.values(state.entities.videos).filter(video => video.genre.includes("Science")),
         Thriller: Object.values(state.entities.videos).filter(video => video.genre.includes("Thriller")),
-        Family: Object.values(state.entities.videos).filter(video => video.genre.includes("Family"))
+        Family: Object.values(state.entities.videos).filter(video => video.genre.includes("Family")),
+        listItems: Object.values(state.entities.list)
     }
 };
 

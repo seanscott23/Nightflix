@@ -3,6 +3,7 @@ import { allVideos } from "../../actions/video_actions";
 import { requestGenres } from "../../actions/genre_actions";
 import SearchPage from "./search_index";
 import { withRouter } from "react-router-dom";
+import {requestUserList } from "../../actions/mylist_actions";
 
 const mapStateToProps = (state) => {
 
@@ -17,6 +18,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     allVideos: () => dispatch(allVideos()),
     requestGenres: () => dispatch(requestGenres()),
+    requestUserList: (userId) => dispatch(requestUserList(userId)),
   };
 };
 

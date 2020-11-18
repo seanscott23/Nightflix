@@ -42,7 +42,7 @@ componentWillUnmount(){
             {this.props.mylist.map((video) => {
               return (
                 <VideosItem
-                  containedWithinListIds= {listIds.includes(video.id)}
+                  containedWithinListIds = {listIds.includes(video.id)}
                   video={video}
                   key={video.id}
                   history={this.props.history}

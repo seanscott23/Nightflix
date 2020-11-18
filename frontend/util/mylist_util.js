@@ -6,6 +6,7 @@ export const fetchList = (user_id) => {
 };
 
 export const addListItem = (video_id, user_id) => {
+
   return  $.ajax({
       method: "POST",
       url: `/api/users/${user_id}/mylist`,
