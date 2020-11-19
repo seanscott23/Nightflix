@@ -68,6 +68,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -102,6 +103,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -136,6 +138,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -170,6 +173,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -204,6 +208,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -238,6 +243,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -272,6 +278,7 @@ class tvShows extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null

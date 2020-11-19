@@ -71,6 +71,7 @@ class Movies extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -108,6 +109,7 @@ class Movies extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -145,6 +147,7 @@ class Movies extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -168,23 +171,22 @@ class Movies extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Drama.slice(
-              this.state.drama,
-              this.state.drama + 6
-            ).map((video) =>
-              this.props.movies.includes(video) ? (
-                <div className="video-item">
-                  <VideosItem
-                    key={"drama" + parseInt(video.id)}
-                    video={video}
-                    history={this.props.history}
-                    addToMyList={this.props.addToMyList}
-                    currentUser={this.props.currentUser}
-                    removeFromMyList={this.props.removeFromMyList}
-                    requestUserList={this.props.requestUserList}
-                  />
-                </div>
-              ) : null
+            {this.props.Drama.slice(this.state.drama, this.state.drama + 6).map(
+              (video) =>
+                this.props.movies.includes(video) ? (
+                  <div className="video-item">
+                    <VideosItem
+                      key={"drama" + parseInt(video.id)}
+                      video={video}
+                      history={this.props.history}
+                      addToMyList={this.props.addToMyList}
+                      currentUser={this.props.currentUser}
+                      removeFromMyList={this.props.removeFromMyList}
+                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                    />
+                  </div>
+                ) : null
             )}
             <div
               className="arrowButton"
@@ -205,23 +207,22 @@ class Movies extends React.Component {
               {" "}
               <i class="fas fa-chevron-left"></i>
             </div>
-            {this.props.Crime.slice(
-              this.state.crime,
-              this.state.crime + 6
-            ).map((video) =>
-              this.props.movies.includes(video) ? (
-                <div className="video-item">
-                  <VideosItem
-                    key={"crime" + parseInt(video.id)}
-                    video={video}
-                    history={this.props.history}
-                    addToMyList={this.props.addToMyList}
-                    currentUser={this.props.currentUser}
-                    removeFromMyList={this.props.removeFromMyList}
-                    requestUserList={this.props.requestUserList}
-                  />
-                </div>
-              ) : null
+            {this.props.Crime.slice(this.state.crime, this.state.crime + 6).map(
+              (video) =>
+                this.props.movies.includes(video) ? (
+                  <div className="video-item">
+                    <VideosItem
+                      key={"crime" + parseInt(video.id)}
+                      video={video}
+                      history={this.props.history}
+                      addToMyList={this.props.addToMyList}
+                      currentUser={this.props.currentUser}
+                      removeFromMyList={this.props.removeFromMyList}
+                      requestUserList={this.props.requestUserList}
+                      listItems={this.props.listItems}
+                    />
+                  </div>
+                ) : null
             )}
             <div
               className="arrowButton"
@@ -256,6 +257,7 @@ class Movies extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null
@@ -293,6 +295,7 @@ class Movies extends React.Component {
                     currentUser={this.props.currentUser}
                     removeFromMyList={this.props.removeFromMyList}
                     requestUserList={this.props.requestUserList}
+                    listItems={this.props.listItems}
                   />
                 </div>
               ) : null

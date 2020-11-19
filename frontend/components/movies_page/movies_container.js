@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
   // debugger
   return {
     currentUser: state.entities.users[state.session.id],
-    mylist: Object.values(state.entities.list),
+    listItems: Object.values(state.entities.list),
     movies: Object.values(state.entities.videos).filter(
       (video) => video.video_type === "movie"
     ),

@@ -5,5 +5,6 @@
         json.video_type video.video_type
         json.genre video.genre
         json.videoUrl url_for(video.video)
+        json.photoUrl url_for(video.photo)
     end
 end

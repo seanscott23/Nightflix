@@ -10,5 +10,6 @@ class Video < ApplicationRecord
   class_name: :Like
 
     has_one_attached :video   
+    has_one_attached :photo
 end
 

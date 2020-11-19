@@ -33,13 +33,15 @@ componentWillUnmount(){
 
 
   render() {
-    let listIds = this.props.mylist.map((video) => {return video.id})
+
+
+    let listIds = this.props.listItems.map((video) => {return video.id})
 
     return (
       <div className="video-container">
       
           <div className="list-video-item-flex">
-            {this.props.mylist.map((video) => {
+            {this.props.listItems.map((video) => {
               return (
                 <VideosItem
                   containedWithinListIds = {listIds.includes(video.id)}
@@ -47,6 +49,7 @@ componentWillUnmount(){
                   key={video.id}
                   history={this.props.history}
                   currentUser={this.props.currentUser}
+                  listItems ={this.props.listItems}
                   className="video-show-list"
                   removeFromMyList={this.props.removeFromMyList}
                   requestUserList={this.props.requestUserList}

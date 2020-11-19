@@ -23,6 +23,10 @@ class VideosIndex extends React.Component {
         this.props.requestUserList(this.props.currentUser.id)
     }
 
+    componentDidUpdate(prevState){
+      (prevState !== this.state) ? this.state : null;
+    }
+
     changeCarouselIndex(category, number){
       const tempState = {}
       if (number === 1){
@@ -86,11 +90,11 @@ class VideosIndex extends React.Component {
                       key={"action" + parseInt(video.id)}
                       video={video}
                       history={this.props.history}
-                      addToMyList={this.props.addToMyList}
-                      currentUser={this.props.currentUser}
-                      removeFromMyList={this.props.removeFromMyList}
-                      listItems={this.props.listItems}
-                      containedWithinListIds={itemIds.includes(video.id)}
+                        addToMyList={this.props.addToMyList}
+                        currentUser={this.props.currentUser}
+                        removeFromMyList={this.props.removeFromMyList}
+                        listItems={this.props.listItems}
+                        containedWithinListIds={itemIds.includes(video.id)}
                     />
                   </div>
                 ))}

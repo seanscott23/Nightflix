@@ -68,7 +68,7 @@ class VideosItem extends React.Component {
 //   }
 
   render() {
-   
+//    debugger
 
     let mylistClass = this.props.mylist ? "video-show-list" : "video-show";
 
@@ -85,7 +85,6 @@ class VideosItem extends React.Component {
     let toggleList = itemIds.includes(this.props.video.id)
       ? this.removeFromList
       : this.addToList;
-
 
 
     return (
@@ -105,9 +104,11 @@ class VideosItem extends React.Component {
             onMouseLeave={(e) => this.handleMouseLeave(e)}
             width="219"
             height="123"
+            poster={this.props.video.photoUrl}
+            type="photo/jpg"
           >
             <source
-              src={`${this.props.video.videoUrl}#t=3`}
+              src={this.props.video.videoUrl}
               type="video/mp4"
             ></source>
           </video>

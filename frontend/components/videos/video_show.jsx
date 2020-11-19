@@ -38,24 +38,31 @@ class VideoShow extends React.Component {
         }
 
         return (
-           <div className="main-video-container">
-               <div className="video-solo">
-                    <div className="video-main" onClick={this.showTitle.bind(this)}>
-                            <video
-                            onClick={this.playVideo.bind(this)}
-                            onDoubleClick={this.toggleFullscreen.bind(this)}
-                                width="600"
-                                height="400">
-                                <source src={`${this.props.video.videoUrl}#t=3`} type="video/mp4" ></source>
-                            </video>
-                        <h1 className="main-title active" >{this.props.video.title}</h1>
-                    </div>
-                    <div className="main-video-control-bar">
-                        <button className="main-video-like-button"><i class="fas fa-plus-circle"></i></button>
-                    </div>
-                </div>
-           </div>
-        )
+          <div className="main-video-container">
+            <div className="video-solo">
+              <div className="video-main" onClick={this.showTitle.bind(this)}>
+                <video
+                  onClick={this.playVideo.bind(this)}
+                  onDoubleClick={this.toggleFullscreen.bind(this)}
+                  width="600"
+                  height="400"
+                  poster={this.props.video.photoUrl} type="photo/jpg"
+                >
+                  <source
+                    src={this.props.video.videoUrl}
+                    type="video/mp4"
+                  ></source>
+                </video>
+                <h1 className="main-title active">{this.props.video.title}</h1>
+              </div>
+              <div className="main-video-control-bar">
+                <button className="main-video-like-button">
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        );
     }
 }
 
