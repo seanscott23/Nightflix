@@ -6,12 +6,12 @@ class Api::MylistController < ApplicationController
     end
 
     # def show
-    #   debugger
     #     @mylist = @current_user.lists.find_by(user_id: params[:user_id])
     #     render :show
     # end
 
     def create
+      # debugger
       @mylikes = UserLike.new(params.require(:mylist).permit(:user_id, :video_id))
       current_user.id = @mylikes.user_id
       if @mylikes.save!

@@ -16,6 +16,7 @@ class VideoPreview extends React.Component {
 
   handleMouseLeave(e) {
     e.currentTarget.pause();
+    e.currentTarget.load();
   }
 
  
@@ -40,9 +41,11 @@ class VideoPreview extends React.Component {
             onMouseLeave={(e) => this.handleMouseLeave(e)}
             width="1434"
             height="600"
+            poster={this.props.video.photoUrl}
+            type="photo/jpg"
           >
             <source
-              src={`${this.props.video.videoUrl}#t=3`}
+              src={this.props.video.videoUrl}
               type="video/mp4"
             ></source>
           </video>

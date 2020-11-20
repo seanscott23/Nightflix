@@ -49,13 +49,14 @@ class tvShows extends React.Component {
         <div className="genre-section-action">
           <h1 className="genre-title">Action</h1>
           <section className="carouselRow">
+            {this.state.action !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("action", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) :null}
 
             {this.props.shows.map((video) =>
               video.genre.includes("Action") ? (
@@ -85,13 +86,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Comedies</h1>
           <section className="carouselRow">
+             {this.state.comedy !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("comedy", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) : null}
             {this.props.shows.map((video) =>
               video.genre.includes("Comedy") ? (
                 <div className="video-item">
@@ -120,13 +122,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Fantasy</h1>
           <section className="carouselRow">
+              {this.state.fantasy !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("fantasy", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) :null}
             {this.props.shows.map((video) =>
               video.genre.includes("Fantasy") ? (
                 <div className="video-item">
@@ -155,13 +158,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Drama</h1>
           <section className="carouselRow">
+             {this.state.drama !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("drama", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) :null}
             {this.props.shows.map((video) =>
               video.genre.includes("Drama") ? (
                 <div className="video-item">
@@ -190,13 +194,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Crime</h1>
           <section className="carouselRow">
+             {this.state.crime !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("crime", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) :null}
             {this.props.shows.map((video) =>
               video.genre.includes("Crime") ? (
                 <div className="video-item">
@@ -225,13 +230,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Science Fiction</h1>
           <section className="carouselRow">
+             {this.state.science !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("science", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>) :null}
             {this.props.shows.map((video) =>
               video.genre.includes("Science") ? (
                 <div className="video-item">
@@ -260,13 +266,14 @@ class tvShows extends React.Component {
         <div className="genre-section">
           <h1 className="genre-title">Romance</h1>
           <section className="carouselRow">
+             {this.state.romance !== 0 ? (
             <div
               className="arrowButton"
               onClick={() => this.changeCarouselIndex("romance", -1)}
             >
               {" "}
               <i class="fas fa-chevron-left"></i>
-            </div>
+            </div>):null}
             {this.props.shows.map((video) =>
               video.genre.includes("Romance") ? (
                 <div className="video-item">

@@ -189,7 +189,7 @@ demo_video27.photo.attach(io: photo27, filename: 'spiritedaway.jpg')
 demo_video28 = Video.create!(title: 'Spotlight', genre: "Drama", video_type: "movie")
 video28 = open("https://nightflix-seeds.s3-us-west-1.amazonaws.com/Spotlight+TRAILER+1+(2015)+-+Mark+Ruffalo%2C+Michael+Keaton+Movie+HD.mp4")
 demo_video28.video.attach(io: video28 , filename: 'Spotlight.mp4')
-photo28 = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/moneyball.jpg')
+photo28 = open('https://nightflix-seeds.s3-us-west-1.amazonaws.com/spotlight.jpg')
 demo_video28.photo.attach(io: photo28, filename: 'spotlight.jpg')
 
 demo_video29 = Video.create!(title: 'The Lord Of The Rings: Return Of The King', genre: "Fantasy", video_type: "movie")

@@ -19,17 +19,15 @@ class VideosItem extends React.Component {
 
   handleMouseLeave(e) {
     e.currentTarget.pause();
+    e.currentTarget.load();
   }
 
   addToList() {
-    this.props.addToMyList(this.props.video.id, this.props.currentUser.id).then(() =>{
- this.setState({
-   checked: true,
- })
-    this.props.containedWithinListIds = true;
+    this.props.addToMyList(this.props.video.id, this.props.currentUser.id).then(() => {
+        this.setState({
+          checked: true,
+        })
     })
- 
-   
   }
 
   removeFromList() {
@@ -42,33 +40,11 @@ class VideosItem extends React.Component {
   });
     })
     this.props.requestUserList(this.props.currentUser.id);
-      this.props.containedWithinListIds = false;
   }
 
-//   componentDidMount() {
-// // debugger
-//     this.props.requestUserList(this.props.currentUser.id).then((data) => {
-//       data = Object.values(data.videos);
-//       for (let index = 0; index < data.length; index++) {
-//         const video = data[index];
-//         if (video.id === this.props.video.id) {
-//           this.setState({
-//             checked: true,
-//           });
-//         }
-//       }
-//     });
-//   }
 
-//   componentDidUpdate(prevProps, prevState){
-//     //   debugger
-//     if(prevState.checked !== this.state.checked){
-//         return this.state.checked
-//     }
-//   }
 
   render() {
-//    debugger
 
     let mylistClass = this.props.mylist ? "video-show-list" : "video-show";
 
@@ -80,7 +56,6 @@ class VideosItem extends React.Component {
       ? "far fa-check-circle"
       : "fas fa-plus-circle";
 
-  
 
     let toggleList = itemIds.includes(this.props.video.id)
       ? this.removeFromList
