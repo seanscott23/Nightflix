@@ -65,8 +65,8 @@ class VideoShow extends React.Component {
     });
 
     let toggleLike = itemIds.includes(this.props.video.id)
-      ? "far fa-check-circle"
-      : "fas fa-plus-circle";
+      ? "far fa-check-circle show"
+      : "fas fa-plus-circle show";
 
     let toggleList = itemIds.includes(this.props.video.id)
       ? this.removeFromList

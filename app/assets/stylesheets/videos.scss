@@ -250,6 +250,20 @@ button:focus {outline:0;}
     font-size: 1.35em;
 }
 
+.main-video-like-button >  .fa-plus-circle{
+  color: white;
+  cursor: pointer;
+  margin: auto 0;
+    font-size: 2em;
+}
+
+.main-video-like-button > .fa-check-circle{
+    color: white;
+  cursor: pointer;
+  margin: auto 0;
+    font-size: 2em;
+}
+
 .fa-check-circle{
     color: white;
   cursor: pointer;
