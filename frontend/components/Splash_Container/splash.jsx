@@ -11,7 +11,7 @@ class SplashForm extends React.Component{
             <div className="splash-page">
                 <div className="ad-text">
                     <h1>Unlimited movies, TV</h1>
-                    <h1>shows, and more.</h1>
+                    <h1>shows, and more!</h1>
                     <span>Watch anywhere. Cancel anytime.</span>
                 </div>
             </div>
