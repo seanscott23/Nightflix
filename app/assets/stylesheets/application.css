@@ -186,9 +186,9 @@ font-family: sans-serif;
 
 .home-nav-bar{
     width: 100%;
-    height: 68px;
+    height: 69px;
     float: left;
-    padding: 0 3.5rem;
+    padding: 0 3.6rem;
     position: fixed;
     z-index: 5;
     display: flex;
@@ -207,16 +207,16 @@ font-family: sans-serif;
 
 
 .left-nav #nightflix-logo{
-    font-size: 25px;
+    font-size: 26px;
     float: left;
 }
 
 .home-tabs{
   float: left;
   line-height: 1.2;
-  padding-left: 40px;
+  padding-left: 41px;
   align-items: center;
-  padding-top: 12px;
+  padding-top: 13px;
   background: transparent;
 }
 
@@ -227,10 +227,10 @@ font-family: sans-serif;
     font-size: 14px;
     cursor: pointer;
    height: 100%;
-   font-weight: 100;
+   font-weight: 101;
    text-decoration: none;
    letter-spacing: .9px;
-   margin-left: 25px;
+   margin-left: 26px;
    font-family:  Arial,  sans-serif;
 }
 
@@ -239,10 +239,10 @@ font-family: sans-serif;
 
 .nav-bar{
     width: 100%;
-    height: 145px;
+    height: 146px;
     margin: 0 3.5rem;
     position: relative;
-    padding-top: 20px;
+    padding-top: 21px;
     overflow: hidden;
     z-index: 4;
 }
