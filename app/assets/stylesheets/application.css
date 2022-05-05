@@ -253,15 +253,15 @@ font-family: sans-serif;
 }
 
 .splash-sign-in {
-    margin-right: 56px;
+    margin-right: 57px;
     line-height: normal;
     background-color: #e50914;
     padding: 7px 17px;
     float: right;
-    font-size: 16px;
-    margin-top: 8px;
+    font-size: 15px;
+    margin-top: 9px;
     box-sizing: border-box;
-    border-radius: 3px;
+    border-radius: 4px;
     text-decoration: none;
     cursor: pointer;
     font-family: sans-serif;
@@ -291,7 +291,7 @@ font-family: sans-serif;
 }
 
 .ad-text span {
-    font-size: 1.625rem;
+    font-size: 1.624rem;
     text-align: center;
     line-height: 1.1;
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -301,7 +301,7 @@ font-family: sans-serif;
 
 .video-title{   
     color: white;
-    width: 220px;
+    width: 221px;
 }
 
 
